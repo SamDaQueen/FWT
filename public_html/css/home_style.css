@@ -1,10 +1,37 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
 /* 
-    Created on : 10 Feb, 2019, 6:57:27 PM
-    Author     : samre
+Created on : 10 Feb, 2019, 6:57:27 PM
+Author     : Samreen
 */
+body {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	color: #5a5a5a;
+}
+.content {
+	padding: 3rem 1.5rem;
+	text-align: center;
+}
+
+/*Carousel*/
+.carousel, .carousel-caption {
+	margin-bottom: 3.5rem;
+}
+.carousel-item {
+	height: 25rem;
+}
+
+/*sections*/
+.sections	{
+	margin: 0 10rem;
+}
+.featurette-divider {
+	margin: 5rem 0; 
+}
+.featurette-heading {
+	font-size: 3rem;
+	font-weight: 400;
+	line-height: 1;
+	letter-spacing: -.05rem;
+	margin-bottom: 2rem;
+}
 
