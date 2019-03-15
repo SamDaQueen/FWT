@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>SSSM-Membership</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/form_style.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/common.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+			<!--logo-->
+			<a href="#" class="mx-2"><img  style="height: 35px;" src="../static/images/sssm-logo.png"></a>
+			<a class="navbar-brand" href="#">Shree Shyam Satsang Mandal</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<!--mr-auto: https://getbootstrap.com/docs/4.0/utilities/spacing/-->
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="sssm-home.html">Home</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
+						<div class="dropdown-menu" aria-labelledby="dropdown01">
+							<a class="dropdown-item" href="#">Mandal</a>
+							<a class="dropdown-item" href="#">Trustees</a>
+							<a class="dropdown-item" href="#">Dharamshala</a>
+							<a class="dropdown-item" href="#">Managing Committee</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Events</a>
+						<div class="dropdown-menu" aria-labelledby="dropdown02">
+							<a class="dropdown-item" href="#">Gyaaras Calender</a>
+							<a class="dropdown-item" href="#">Kirtan Announcement</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Forms</a>
+						<div class="dropdown-menu" aria-labelledby="dropdown03">
+							<a class="dropdown-item" href="#">Query</a>
+							<a class="dropdown-item" href="#">Room Booking</a>
+							<a class="dropdown-item" href="#">Membership</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Donations</a>
+					</li>
+				</ul>
+				<!--my-2: https://getbootstrap.com/docs/4.0/utilities/spacing/-->
+				<button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Gallery</button>
+			</div>
+		</nav>
+	</header>
+	<main role="main">
+
+		<section class="jumbotron text-center">
+			<div class="container">
+				<h1 class="jumbotron-heading">Membership Form</h1>
+				<p class="lead text-muted">Fill and submit this form to join our Mandal.</p>
+			</div>
+		</section>
+
+		<div class="py-5 bg-light">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<form>
+							<div class="row">
+								<div class="col-md-6 mb-3">
+									<label for="firstName">First name</label>
+									<input type="text" class="form-control" id="firstName" required autofocus>
+								</div>
+								<div class="col-md-6 mb-3">
+									<label for="lastName">Last name</label>
+									<input type="text" class="form-control" id="lastName"required>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-6 mb-3">
+									<label for="email">Email</label>
+									<input type="text" class="form-control" placeholder="example@gmail.com" id="email" required>
+								</div>
+								<div class="col-md-6 mb-3">
+									<label for="birth-date">Birth Date</label>
+									<input type="date" class="form-control" id="birth-date" max="2010-12-31" min="1950-12-31" required>
+								</div>
+							</div>
+
+							<div class="mb-3">
+								<label for="address">Address</label>
+								<textarea class="form-control" id="address" rows="5" required></textarea>
+							</div>
+
+							<div class="mb-3">
+								<label for="occupation">Occupation</label>
+								<input type="text" class="form-control" id="occupation" required>
+							</div>
+
+							<div class="row">
+								<div class="col-md-4 mb-3">
+									<label for="landline">Landline</label>
+									<input type="number" class="form-control" id="landline" placeholder="022xxxxxxxx" minlength="8" min="0">
+								</div>
+								<div class="col-md-4 mb-3">
+									<label for="office">Office</label>
+									<input type="number" class="form-control" id="office" placeholder="022xxxxxxxx" minlength="8" min="0">
+								</div>
+								<div class="col-md-4 mb-3">
+									<label for="mobile">Mobile</label>
+									<input type="number" class="form-control" id="mobile" placeholder="xxxxxxxxxx" required minlength="10" min="0">
+								</div>
+							</div>
+							<hr class="mb-4">
+
+							<h4 class="mb-3">Family members</h4>
+
+							<div class="row">
+								<div class="col-md-4 mb-3">
+									<input type="text" class="form-control" id="fm1-name" placeholder="Name" required>
+								</div>
+								<div class="col-md-4 mb-3">
+									<input type="text" class="form-control" id="fm1-relation" placeholder="Relation" required>
+								</div>
+								<div class="col-md-4 mb-3">
+									<input type="date" class="form-control" id="fm1-birth-date" placeholder="Birth date" max="2010-12-31" min="1950-12-31" required>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-4 mb-3">
+									<input type="text" class="form-control" id="fm2-name" placeholder="Name" required>
+								</div>
+								<div class="col-md-4 mb-3">
+									<input type="text" class="form-control" id="fm2-relation" placeholder="Relation" required>
+								</div>
+								<div class="col-md-4 mb-3">
+									<input type="date" class="form-control" id="fm2-birth-date" placeholder="Birth date" max="2010-12-31" min="1950-12-31" required>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-4 mb-3">
+									<input type="text" class="form-control" id="fm3-name" placeholder="Name" required>
+								</div>
+								<div class="col-md-4 mb-3">
+									<input type="text" class="form-control" id="fm3-relation" placeholder="Relation" required>
+								</div>
+								<div class="col-md-4 mb-3">
+									<input type="date" class="form-control" id="fm3-birth-date" placeholder="Birth date" max="2010-12-31" min="1950-12-31" required>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-4 mb-3">
+									<input type="text" class="form-control" id="fm4-name" placeholder="Name" required>
+								</div>
+								<div class="col-md-4 mb-3">
+									<input type="text" class="form-control" id="fm4-relation" placeholder="Relation" required>
+								</div>
+								<div class="col-md-4 mb-3">
+									<input type="date" class="form-control" id="fm4-birth-date" placeholder="Birth date" max="2010-12-31" min="1950-12-31" required>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-4 mb-3">
+									<input type="text" class="form-control" id="fm5-name" placeholder="Name" required>
+								</div>
+								<div class="col-md-4 mb-3">
+									<input type="text" class="form-control" id="fm5-relation" placeholder="Relation" required>
+								</div>
+								<div class="col-md-4 mb-3">
+									<input type="date" class="form-control" id="fm5-birth-date" placeholder="Birth date" max="2010-12-31" min="1950-12-31" required>
+								</div>
+							</div>
+
+							<hr class="mb-4">
+							<button class="btn btn-danger btn-lg btn-block" type="submit">Submit Membership Form</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
