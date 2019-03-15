@@ -5,7 +5,7 @@ app = Flask(__name__)
 def hello_world():
     author = "Samreen!"
     name = "Gabriel"
-    return render_template('index.html', author=author, name=name)
+    return render_template('sssm-home.html', author=author, name=name)
 
 if __name__ == "__main__":
     app.run()

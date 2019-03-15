@@ -1,0 +1,372 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"h",
+				"height\tproperty"
+			],
+			[
+				"te",
+				"text-right"
+			],
+			[
+				"car",
+				"carousel-caption"
+			],
+			[
+				"li",
+				"link\tTag"
+			],
+			[
+				"s",
+				"style\tAttr"
+			],
+			[
+				"ma",
+				"margin\tproperty"
+			],
+			[
+				"wi",
+				"width\tproperty"
+			],
+			[
+				"in",
+				"input\tTag"
+			],
+			[
+				"re",
+				"result"
+			],
+			[
+				"sc",
+				"scope"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"p",
+				"padding\tproperty"
+			],
+			[
+				"th",
+				"thead\tTag"
+			],
+			[
+				"f",
+				"for\tfor"
+			],
+			[
+				"next",
+				"nextLine"
+			],
+			[
+				"n",
+				"name"
+			],
+			[
+				"De",
+				"Deposits"
+			],
+			[
+				"Sa",
+				"Saving"
+			],
+			[
+				"set",
+				"setDeposits"
+			],
+			[
+				"w",
+				"withdrawals"
+			],
+			[
+				"A",
+				"Acc_Details"
+			],
+			[
+				"de",
+				"deposits"
+			],
+			[
+				"c",
+				"cust_name"
+			],
+			[
+				"Q",
+				"Qdelete"
+			],
+			[
+				"i",
+				"inc\t#include <…>"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"git co",
+				"Git: Commit"
+			],
+			[
+				"pus",
+				"Git: Push Current Branch"
+			],
+			[
+				"git: re",
+				"Git: Add Remote"
+			],
+			[
+				"git: rem",
+				"Git: Add Remote"
+			],
+			[
+				"pu",
+				"Git: Push Current Branch"
+			],
+			[
+				"add",
+				"Git: Add Remote"
+			],
+			[
+				"gs",
+				"Git: Status"
+			],
+			[
+				"Git: ",
+				"Git: Init"
+			],
+			[
+				"SublimeGit: ",
+				"SublimeGit: Documentation"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Repository"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Git",
+				"Set Syntax: Git Commit"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 157.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/flask-project.py",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/css/home_style.css",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/sssm-home.html",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/home.html",
+		"/N/Sem VI/FWT/Angular/shopping_cart2.html",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/Carousel Template · Bootstrap.html",
+		"/N/Sem VI/FWT/bootstrap.html",
+		"/N/Sem VI/FWT/Angular/calculator.html",
+		"/N/Sem VI/FWT/Experiment 5/Subjects_html.html",
+		"/N/Sem VI/FWT/Angular/shopping_cart.html",
+		"/C/Users/samre/Documents/Jupyter/Multiple Regression/Position_Salary.ipynb",
+		"/N/MTA/PUBG/PUBG/gabriel.py",
+		"/C/Users/samre/Documents/Jupyter/pubg_spyder.py",
+		"/N/Sem VI/FWT/Experiment 5/subjects.js",
+		"/N/Sem VI/FWT/Zozor/replica.html",
+		"/N/Sem VI/FWT/Zozor/rep_style.css",
+		"/N/Sem VI/FWT/Experiment 1/form.html",
+		"/N/Sem VI/FWT/Experiment 2/home.html",
+		"/N/Sem VI/FWT/Experiment 1/style.css",
+		"/N/Sem VI/FWT/Experiment 1/home.html",
+		"/N/Sem VI/SP/artemis-fowl.txt",
+		"/N/Sem VI/Python/Sem 6 Python Project/flask-project/flask-project.py",
+		"/C/Program Files (x86)/Microsoft Visual Studio/Shared/Python36_64/Lib/turtledemo/fractalcurves.py",
+		"/N/Sem VI/Python/Sem 6 Python Project/flask-project/templates/index.html",
+		"/N/Sem VI/FWT/FWT Project/public_html/index.html",
+		"/N/Sem VI/FWT/FWT Project/fwt-project.sublime-project",
+		"/C/Users/samre/AppData/Roaming/Sublime Text 3/Packages/SublimeGit/Default.sublime-keymap",
+		"/C/Users/samre/AppData/Roaming/Sublime Text 3/Packages/User/SublimeGit.sublime-settings",
+		"/C/Program Files/Sublime Text 3/sublime_plugin.py",
+		"/N/Sem VI/Python/Sem 6 Python Project/spyware/manage.py",
+		"/N/Sem VI/Python/Sem 6 Python Project/spyware/spyware/urls.py",
+		"/N/Sem VI/Python/Sem 6 Python Project/spyware/keylogger/urls.py",
+		"/N/Sem VI/Python/Sem 6 Python Project/spyware/keylogger/views.py",
+		"/N/Sem VI/Python/Sem 6 Python Project/spyware/spyware/settings.py",
+		"/N/Sem VI/Python/Sem 6 Python Project/window.py",
+		"/C/Users/samre/Documents/DemoNew.java",
+		"/C/Users/samre/Documents/Student.java",
+		"/C/Users/samre/Documents/Marks.java",
+		"/C/Users/samre/Documents/Kanak/student.java",
+		"/C/Users/samre/Documents/Kanak/demo.java",
+		"/C/Users/samre/Documents/Kanak/marks1.java",
+		"/N/Programming Lab/Kanak/demo.java",
+		"/N/Programming Lab/Kanak/marks1.java",
+		"/N/Programming Lab/Kanak/student.java",
+		"/C/Users/samre/Documents/Pattern.java",
+		"/C/Users/samre/Documents/Star.java",
+		"/C/Users/samre/Documents/Star2.java",
+		"/C/Users/samre/Documents/Pattern2.java",
+		"/C/Users/samre/Documents/Roots.java",
+		"/C/Users/samre/Documents/Main2.java",
+		"/C/Users/samre/Documents/Main.java",
+		"/C/Users/samre/Documents/Bank.java",
+		"/C/Users/samre/Downloads/Main.java",
+		"/N/Data Structures/InfixtoPostfix",
+		"/C/Users/samre/Documents/Bill.java",
+		"/C/Users/samre/Documents/Retail.java",
+		"/C/Users/samre/Documents/Customer.java",
+		"/N/Data Structures/2/Sort.cpp",
+		"/C/Users/samre/Documents/Hello.java",
+		"/N/Programming Lab/Hello.java"
+	],
+	"find":
+	{
+		"height": 40.8
+	},
+	"find_in_files":
+	{
+		"height": 126.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 40.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": ".project.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 81.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

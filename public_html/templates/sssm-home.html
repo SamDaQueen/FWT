@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Bootstrap Example</title>
+	<title>SSSM-Home</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/home_style.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/home_style.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/common.css">
 </head>
 <body>
 	<header>
 		<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
 			<!--logo-->
-			<a href="#" class="mx-2"><img  style="height: 35px;" src="../images/sssm-logo.png"></a>
-			<a class="navbar-brand" href="#">Shree Shyam Satsang Mandal</a>
+			<a href="#" class="mx-2"><img  style="height: 35px;" src="../static/images/sssm-logo.png"></a>
+			<a class="navbar-brand" href="#"><b>Shree Shyam Satsang Mandal</b></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -51,7 +52,7 @@
 					</li>
 				</ul>
 				<!--my-2: https://getbootstrap.com/docs/4.0/utilities/spacing/-->
-				<button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Gallery</button>
+				<a href="sssm-gallery.html"><button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Gallery</button></a>
 			</div>
 		</nav>
 	</header>
@@ -69,45 +70,51 @@
 				<!--The .active class needs to be added to one of the slides otherwise the carousel will not be visible-->
 				<div class="carousel-item active">
 					<div class="mx-0">
-						<img class="d-block w-100" src="../images/A.jpg" alt="First slide">
+						<img class="d-block w-100" src="../static/images/A.jpg" alt="First slide">
 						<div class="carousel-caption text-left">
-							<h1>Dharamshala</h1>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<div class="inner-banner">
+								<h1>Dharamshala</h1>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							</div>
 							<button class="btn btn-danger">Contact us</button>
 						</div>
 					</div>
 				</div>
 				<div class="carousel-item">
 					<div class="mx-0">
-						<img class="d-block w-100" src="../images/B.jpg" alt="First slide">
+						<img class="d-block w-100" src="../static/images/B.jpg" alt="First slide">
 						<div class="carousel-caption text-left">
-							<h1>Latest Event</h1>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<div class="inner-banner">
+								<h1>Latest Event</h1>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							</div>
 							<button class="btn btn-danger">See all events</button>
 						</div>
 					</div>
 				</div>
 				<div class="carousel-item">
 					<div class="mx-0">
-						<img class="d-block w-100" src="../images/C.jpg" alt="First slide">
+						<img class="d-block w-100" src="../static/images/C.jpg" alt="First slide">
 						<div class="carousel-caption text-left">
-							<h1>Gallery</h1>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<div class="inner-banner">
+								<h1>Gallery</h1>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							</div>
 							<button class="btn btn-danger">Explore</button>
 						</div>
 					</div>
@@ -130,7 +137,7 @@
 					<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
 				</div>
 				<div class="col-md-5 order-md-1">
-					<img src="../images/A.jpg" class="d-block w-100">
+					<img src="../static/images/A.jpg" class="d-block w-100">
 				</div>
 			</div>
 
@@ -142,7 +149,7 @@
 					<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
 				</div>
 				<div class="col-md-5">
-					<img src="../images/B.jpg" class="d-block w-100">
+					<img src="../static/images/B.jpg" class="d-block w-100">
 				</div>
 			</div>
 
@@ -154,7 +161,7 @@
 					<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
 				</div>
 				<div class="col-md-5 order-md-1">
-					<img src="../images/A.jpg" class="d-block w-100">
+					<img src="../static/images/A.jpg" class="d-block w-100">
 				</div>
 			</div>
 
@@ -163,7 +170,7 @@
 
 		<footer class="container">
 			<p class="float-right"><a href="#">Back to top</a></p>
-			<p>&copy; SSSM, Mumbai &middot; <a href="#">Contact</a> &middot; <a href="#">Donation</a></p>
+			<p>&copy; SSSM, Mumbai &middot; <a href="#">Contact</a> &middot; <a href="#">Donation</a> &middot; <a href="sssm-login.html">Admin Login</a></p>
 		</footer>
 
 	</main>
