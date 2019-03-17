@@ -9,55 +9,9 @@
 	<link rel="stylesheet" type="text/css" href="../static/css/common.css">
 </head>
 <body>
-	<header>
-		<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-			<!--logo-->
-			<a href="#" class="mx-2"><img  style="height: 35px;" src="../static/images/sssm-logo.png"></a>
-			<a class="navbar-brand" href="#">Shree Shyam Satsang Mandal</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarCollapse">
-				<!--mr-auto: https://getbootstrap.com/docs/4.0/utilities/spacing/-->
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="sssm-home.html">Home</a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
-						<div class="dropdown-menu" aria-labelledby="dropdown01">
-							<a class="dropdown-item" href="#">Mandal</a>
-							<a class="dropdown-item" href="#">Trustees</a>
-							<a class="dropdown-item" href="#">Dharamshala</a>
-							<a class="dropdown-item" href="#">Managing Committee</a>
-						</div>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Events</a>
-						<div class="dropdown-menu" aria-labelledby="dropdown02">
-							<a class="dropdown-item" href="#">Gyaaras Calender</a>
-							<a class="dropdown-item" href="#">Kirtan Announcement</a>
-						</div>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Forms</a>
-						<div class="dropdown-menu" aria-labelledby="dropdown03">
-							<a class="dropdown-item" href="#">Membership</a>
-							<a class="dropdown-item" href="#">Room Booking</a>
-							<a class="dropdown-item" href="#">Member Information</a>
-						</div>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Donations</a>
-					</li>
-				</ul>
-				<!--my-2: https://getbootstrap.com/docs/4.0/utilities/spacing/-->
-				<button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Gallery</button>
-			</div>
-		</nav>
-	</header>
-	<main role="main">
+	{{header.html}}
 
+	<main>
 		<section class="jumbotron text-center">
 			<div class="container">
 				<h1 class="jumbotron-heading">Managing Committee</h1>
@@ -125,9 +79,11 @@
 				</div>
 			</div>
 		</div>
-	</div>
-</main>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	</main>
+
+	{{footer.html}}
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -4,6 +4,46 @@
 		"selected_items":
 		[
 			[
+				"max",
+				"maxlength\tAttr"
+			],
+			[
+				"min",
+				"min\tAttr"
+			],
+			[
+				"ma",
+				"maxlength\tAttr"
+			],
+			[
+				"p",
+				"placeholder\tAttr"
+			],
+			[
+				"au",
+				"autofocus\tAttr"
+			],
+			[
+				"la",
+				"landline"
+			],
+			[
+				"re",
+				"required\tAttr"
+			],
+			[
+				"co",
+				"cover\tbackground-size"
+			],
+			[
+				"ba",
+				"background-size\tproperty"
+			],
+			[
+				"ali",
+				"align-items\tproperty"
+			],
+			[
 				"h",
 				"height\tproperty"
 			],
@@ -24,10 +64,6 @@
 				"style\tAttr"
 			],
 			[
-				"ma",
-				"margin\tproperty"
-			],
-			[
 				"wi",
 				"width\tproperty"
 			],
@@ -36,20 +72,12 @@
 				"input\tTag"
 			],
 			[
-				"re",
-				"result"
-			],
-			[
 				"sc",
 				"scope"
 			],
 			[
 				"di",
 				"div\tTag"
-			],
-			[
-				"p",
-				"padding\tproperty"
 			],
 			[
 				"th",
@@ -107,10 +135,34 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/N/Sem VI/Python/Artificial Conversational Entity/ace.py",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
 	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				""
+			]
+		]
 	],
 	"build_varint": "",
 	"command_palette":
@@ -119,6 +171,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
 			[
 				"git co",
 				"Git: Commit"
@@ -156,10 +212,6 @@
 				"SublimeGit: Documentation"
 			],
 			[
-				"Package Control: ",
-				"Package Control: Remove Repository"
-			],
-			[
 				"install",
 				"Package Control: Install Package"
 			],
@@ -186,15 +238,38 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/N/Sem VI/FWT/FWT_Miniproject"
+	],
 	"file_history":
 	[
-		"/N/Sem VI/FWT/FWT_Miniproject/public_html/flask-project.py",
-		"/N/Sem VI/FWT/FWT_Miniproject/public_html/css/home_style.css",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/sssm-mandal.html",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/sssm-committee.html",
 		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/sssm-home.html",
-		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/home.html",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/static/css/profile_style.css",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/sssm-trustees.html",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/sssm-roombooking.html",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/sssm-membership.html",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/sssm-query.html",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/static/css/form_style.css",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/static/css/query_style.css",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/static/css/gallery_style.css",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/static/css/common.css",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/sssm-login.html",
 		"/N/Sem VI/FWT/Angular/shopping_cart2.html",
-		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/Carousel Template · Bootstrap.html",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/sssm-gallery.html",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/static/css/home_style.css",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/static/css/login_style.css",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/static/css/gilroy-bold-cufonfonts-webfont/style.css",
+		"/N/Sem VI/FWT/Zozor/rep_style.css",
 		"/N/Sem VI/FWT/bootstrap.html",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/flask-project.py",
+		"/N/Sem VI/Python/Artificial Conversational Entity/ace.py",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/css/login_style.css",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/css/home_style.css",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/home.html",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/Carousel Template · Bootstrap.html",
 		"/N/Sem VI/FWT/Angular/calculator.html",
 		"/N/Sem VI/FWT/Experiment 5/Subjects_html.html",
 		"/N/Sem VI/FWT/Angular/shopping_cart.html",
@@ -203,7 +278,6 @@
 		"/C/Users/samre/Documents/Jupyter/pubg_spyder.py",
 		"/N/Sem VI/FWT/Experiment 5/subjects.js",
 		"/N/Sem VI/FWT/Zozor/replica.html",
-		"/N/Sem VI/FWT/Zozor/rep_style.css",
 		"/N/Sem VI/FWT/Experiment 1/form.html",
 		"/N/Sem VI/FWT/Experiment 2/home.html",
 		"/N/Sem VI/FWT/Experiment 1/style.css",
@@ -251,7 +325,7 @@
 	],
 	"find":
 	{
-		"height": 40.8
+		"height": 40.0
 	},
 	"find_in_files":
 	{
@@ -262,9 +336,17 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
+			"Query",
+			"5",
+			"zip",
+			"state",
+			"country",
+			"username",
+			"Light",
+			"../images"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -272,6 +354,13 @@
 		"regex": false,
 		"replace_history":
 		[
+			"Membership",
+			"mobile",
+			"office",
+			"phone",
+			"email",
+			"Regular",
+			"../static/images"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -282,14 +371,43 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/N/Sem VI/Python/Artificial Conversational Entity/ace.py",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 28.0
+		"height": 27.0
 	},
 	"input":
 	{
@@ -318,15 +436,31 @@
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 178.0
+	},
 	"output.find_results":
 	{
 		"height": 0.0
 	},
+	"output.git-commit":
+	{
+		"height": 32.0
+	},
+	"output.git-init":
+	{
+		"height": 126.0
+	},
+	"output.git-push":
+	{
+		"height": 0.0
+	},
 	"pinned_build_system": "",
-	"project": ".project.sublime-project",
+	"project": "sssm.sublime-project",
 	"replace":
 	{
-		"height": 52.0
+		"height": 70.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -364,7 +498,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 81.0,
+	"side_bar_width": 279.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
