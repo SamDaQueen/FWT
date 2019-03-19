@@ -1,0 +1,15 @@
+events: [
+				{
+					title: 'Event Title1',
+					start: '2019-03-17T13:13',
+					end: '2019-03-17T15:13'
+				},
+				{
+					title: 'Event Title2',
+					start: '2019-03-17',
+				},
+				{
+					title: 'Sample',
+					start: '2019-03-17',
+				},
+		]	

@@ -1,0 +1,32 @@
+.content {
+	padding: 3rem 1.5rem;
+	text-align: center;
+}
+
+/*Carousel*/
+.carousel, .carousel-caption {
+	margin-bottom: 3.5rem;
+}
+.carousel-item {
+	height: 25rem;
+}
+.inner-banner	{
+	background-color: #00000070;
+	padding: 10px;
+	margin-bottom: 10px; 
+}
+/*sections*/
+.sections	{
+	margin: 0 10rem;
+}
+.featurette-divider {
+	margin: 5rem 0; 
+}
+.featurette-heading {
+	font-size: 3rem;
+	font-weight: 400;
+	line-height: 1;
+	letter-spacing: -.05rem;
+	margin-bottom: 2rem;
+}
+

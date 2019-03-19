@@ -1,0 +1,10 @@
+.jumbotron-heading {
+  font-weight: 500;
+}
+.jumbotron  {
+  margin-bottom: 0px; 
+}
+img {
+  /*so that image does not stretch on resizing*/
+  object-fit: cover;
+}
