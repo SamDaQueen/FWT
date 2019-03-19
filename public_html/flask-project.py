@@ -7,7 +7,7 @@ def base():
     
     return render_template('sssm-home.html')
 
-@app.route('/home')
+@app.route('/sssm-home')
 def home():
     
     return render_template('sssm-home.html')
@@ -17,20 +17,20 @@ def gallery():
     
     return render_template('sssm-gallery.html')
 
-@app.route('/sssm-commitee')
+@app.route('/sssm-committee')
 def commitee():
     
-    return render_template('sssm-commitee.html')
+    return render_template('sssm-committee.html')
 
 @app.route('/sssm-developers')
 def developers():
     
-    return render_template('sssm-home.html')
+    return render_template('sssm-developers.html')
 
 @app.route('/sssm-dharamshala')
 def dharamshala():
     
-    return render_template('sssm-home.html')
+    return render_template('sssm-dharamshala.html')
 
 @app.route('/sssm-downloads')
 def downloads():
@@ -75,7 +75,7 @@ def supportus():
 @app.route('/sssm-trustees')
 def trustees():
     
-    return render_template('sssm-trsutees.html')
+    return render_template('sssm-trustees.html')
 
 @app.route('/favicon.ico')
 def favicon():
