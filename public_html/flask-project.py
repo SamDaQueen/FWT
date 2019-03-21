@@ -1,6 +1,6 @@
 import database_handler
 import datetime
-from flask import Flask, render_template, send_from_directory,request,abort 
+from flask import Flask, render_template, send_from_directory, json, request, jsonify,request,abort 
 import os
 import email_handler
 app = Flask(__name__)
@@ -154,6 +154,13 @@ def trustees():
 def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static/images'),
                           'sssm-logo.png')
+
+@app.route('/js')
+def renderblog():
+    filename = os.path.join(app.static_folder, 'data.json')
+    with open(filename) as blog_file:
+        data = json.load(blog_file)
+    return jsonify(data);
 
 
 if __name__ == "__main__":
