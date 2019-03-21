@@ -1,5 +1,8 @@
-from flask import Flask, render_template, send_from_directory
+import database_handler
+import datetime
+from flask import Flask, render_template, send_from_directory,request,abort 
 import os
+import email_handler
 app = Flask(__name__)
 
 @app.route('/')
@@ -52,15 +55,85 @@ def mandal():
     
     return render_template('sssm-mandal.html')
 
-@app.route('/sssm-membership')
+@app.route('/sssm-membership',methods = ['POST','GET'])
 def membership():
-    
-    return render_template('sssm-membership.html')
 
-@app.route('/sssm-query')
-def query():
+    if request.method == "GET":
+        return render_template('sssm-membership.html')
+    elif request.method == "POST":
+        #incomplete
+        member = { 'first_name':request.form['firstName'],'last_name':request.form['lastName'],
+        'email':request.form['email'],'birth_date':request.form['birth-date'],
+        'address':request.form['address'],'occupation':request.form['occupation'],
+        'mobile':request.form['mobile']}
+
+
+        if request.form['landline']!=  '':
+            member['landline']= request.form['landline']
+        if request.form['office']!=  '':
+            member['office']= request.form['office']
+
+        if request.form['fm1-name']!=  '':
+            member['fm1-name']= request.form['fm1-name']
+        if request.form['fm1-relation']!=  '':
+            member['fm1-relation']= request.form['fm1-relation']
+        if request.form['fm1-birth-date']!=  '':
+            member['fm1-birth-date']= request.form['fm1-birth-date']
+
+        if request.form['fm2-name']!=  '':
+            member['fm2-name']= request.form['fm2-name']
+        if request.form['fm2-relation']!=  '':
+            member['fm2-relation']= request.form['fm2-relation']
+        if request.form['fm2-birth-date']!=  '':
+            member['fm2-birth-date']= request.form['fm2-birth-date']
+
+        if request.form['fm3-name']!=  '':
+            member['fm3-name']= request.form['fm3-name']
+        if request.form['fm3-relation']!=  '':
+            member['fm3-relation']= request.form['fm3-relation']
+        if request.form['fm3-birth-date']!=  '':
+            member['fm3-birth-date']= request.form['fm3-birth-date']
+
+        if request.form['fm4-name']!=  '':
+            member['fm4-name']= request.form['fm4-name']
+        if request.form['fm4-relation']!=  '':
+            member['fm4-relation']= request.form['fm4-relation']
+        if request.form['fm4-birth-date']!=  '':
+            member['fm4-birth-date']= request.form['fm4-birth-date']
+
+        if request.form['fm5-name']!=  '':
+            member['fm5-name']= request.form['fm5-name']
+        if request.form['fm5-relation']!=  '':
+            member['fm5-relation']= request.form['fm5-relation']
+        if request.form['fm5-birth-date']!=  '':
+            member['fm5-birth-date']= request.form['fm5-birth-date']
+
+        member['date_time'] = datetime.datetime.now().strftime("%d %B %Y at %X")
+
+        database_handler.Member(member)
+        flag=email_handler.send_membership_mail(member)
+
+        
+        return render_template('temp.html',print=flag)
     
-    return render_template('sssm-query.html')
+    
+
+@app.route('/sssm-query',methods = ['POST','GET'])
+def query_page():
+    if request.method == "GET":
+    	return render_template('sssm-query.html')
+    elif request.method == "POST":
+        query = { 'first_name':request.form['firstName'],'last_name':request.form['lastName'],
+        'email':request.form['email'],'mobile':request.form['mobile'],'query':request.form['query']}
+        query['date_time'] = datetime.datetime.now().strftime("%d %B %Y at %X")
+
+        database_handler.Query(query)
+        flag=email_handler.send_query_mail(query)
+
+        
+        return render_template('temp.html',print=flag)
+
+
 
 @app.route('/sssm-roombooking')
 def roombooking():
