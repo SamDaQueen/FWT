@@ -1,0 +1,9 @@
+.container {
+  max-width: 50rem;
+}
+.jumbotron-heading {
+  font-weight: 500;
+}
+.jumbotron  {
+  margin-bottom: 0px; 
+}
