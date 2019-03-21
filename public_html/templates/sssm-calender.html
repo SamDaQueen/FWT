@@ -1,89 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>SSSM-Event Calender</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel='stylesheet' href='../static/fullcalendar/fullcalendar.css' />
-	<script src='../static/fullcalendar/lib/jquery.min.js'></script>
-	<script src='../static/fullcalendar/lib/moment.min.js'></script>
-	<script src='../static/fullcalendar/fullcalendar.js'></script>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"></head>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="../static/css/calender_style.css">
-	<link rel="stylesheet" type="text/css" href="../static/css/profile_style.css">
-	<link rel="stylesheet" type="text/css" href="../static/css/common.css">
-	<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+  <title>SSSM-Event Calender</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel='stylesheet' href='../static/fullcalendar/fullcalendar.css' />
+  <script src='../static/fullcalendar/lib/jquery.min.js'></script>
+  <script src='../static/fullcalendar/lib/moment.min.js'></script>
+  <script src='../static/fullcalendar/fullcalendar.js'></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"></head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../static/css/calender_style.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/profile_style.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/common.css">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
 </head>
 <body>
-	{% include 'header.html' %}
+  {% include 'header.html' %}
 
-	<main>
-		<section class="jumbotron text-center">
-			<div class="container">
-				<h1 class="jumbotron-heading">Event Calender</h1>
-				<p class="lead text-muted">View all events.</p>
-			</div>
-		</section>
+  <main>
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">Event Calender</h1>
+        <p class="lead text-muted">View all events.</p>
+      </div>
+    </section>
 
-		<div class="py-5 bg-light">
-			<div class="container">
-				<div id='calendar'></div>
-			</div>
-		</div>
-	</main>
+    <div class="py-5 bg-light">
+      <div class="container">
+        <div id='calendar'></div>
+      </div>
+    </div>
+  </main>
 
-	{% include 'footer.html' %}
-	
-	<script type="text/javascript">
-		$(document).ready(function()    {
-			$(function() {
-				$('#calendar').fullCalendar({
-				//for adding events, later add to json file which needs to be on server
-				events: [
-				{
-					title: 'Event Title1',
-					start: '2019-03-17T13:13',
-					end: '2019-03-17T15:13'
-				},
-				{
-					title: 'Event Title2',
-					start: '2019-03-17',
-				},
-				{
-					title: 'Sample',
-					start: '2019-03-17',
-				},
-				],
-
-				eventColor: '#DC3545',
-				themeSystem: 'bootstrap4',
-				header: {
-					left: 'prevYear,prev,next,nextYear today',
-					center: 'title',
-					right: 'month,listMonth'
-				},
-				weekNumbers: false,
-				eventLimit: true, // allow "more" link when too many events
-				bootstrapFontAwesome: 	{
-					close: 'fa-times',
-					prev: 'fa-chevron-left',
-					next: 'fa-chevron-right',
-					prevYear: 'fa-angle-double-left',
-					nextYear: 'fa-angle-double-right'
-				},
-				buttonText: 	{
-					today: 'Today',
-					month: 'Month',
-					list: 'List'
-				},
-				allDayText: 'All Day',
-				selectable: true,
-			});
-			});
-		})
-	</script>
+  {% include 'footer.html' %}
+  
+  <script type="text/javascript">
+    $(document).ready(function()    {
+      $(function() {
+        $('#calendar').fullCalendar({
+        //for adding events, later add to json file which needs to be on server
+        eventSources: [
+          {
+            url : 'http://127.0.0.1:5000/js'
+          }
+        ],
+        eventColor: '#DC3545',
+        themeSystem: 'bootstrap4',
+        header: {
+          left: 'prevYear,prev,next,nextYear today',
+          center: 'title',
+          right: 'month,listMonth'
+        },
+        weekNumbers: false,
+        eventLimit: true, // allow "more" link when too many events
+        bootstrapFontAwesome:   {
+          close: 'fa-times',
+          prev: 'fa-chevron-left',
+          next: 'fa-chevron-right',
+          prevYear: 'fa-angle-double-left',
+          nextYear: 'fa-angle-double-right'
+        },
+        buttonText:   {
+          today: 'Today',
+          month: 'Month',
+          list: 'List'
+        },
+        allDayText: 'All Day',
+        selectable: true,
+      });
+      });
+    })
+  </script>
 
 </body>
 </html>
