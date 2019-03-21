@@ -159,3 +159,9 @@ def send_membership_mail(member):
 	send_and_close(server,msg_2.as_string())
 
 	return 'YEs'
+
+def send_booking_mail():
+
+	server = login()
+
+	send_and_close(server,msg_2.as_string())

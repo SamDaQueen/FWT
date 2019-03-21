@@ -59,9 +59,9 @@ def mandal():
 def membership():
 
     if request.method == "GET":
-        return render_template('sssm-membership.html')
+        return render_template('sssm-membership.html',form=1)
     elif request.method == "POST":
-        #incomplete
+        
         member = { 'first_name':request.form['firstName'],'last_name':request.form['lastName'],
         'email':request.form['email'],'birth_date':request.form['birth-date'],
         'address':request.form['address'],'occupation':request.form['occupation'],
@@ -114,14 +114,14 @@ def membership():
         flag=email_handler.send_membership_mail(member)
 
         
-        return render_template('temp.html',print=flag)
+        return render_template('sssm-membership.html',form=2)
     
     
 
 @app.route('/sssm-query',methods = ['POST','GET'])
 def query_page():
     if request.method == "GET":
-    	return render_template('sssm-query.html')
+    	return render_template('sssm-query.html',form=1)
     elif request.method == "POST":
         query = { 'first_name':request.form['firstName'],'last_name':request.form['lastName'],
         'email':request.form['email'],'mobile':request.form['mobile'],'query':request.form['query']}
@@ -131,14 +131,23 @@ def query_page():
         flag=email_handler.send_query_mail(query)
 
         
-        return render_template('temp.html',print=flag)
+        return render_template('sssm-query.html',form=2)
 
 
 
 @app.route('/sssm-roombooking')
 def roombooking():
-    
-    return render_template('sssm-roombooking.html')
+    #incomplete
+    if request.method == "GET":
+        return render_template('sssm-roombooking.html',form=1)
+    elif request.method == "POST":
+        booking = { 'first_name':request.form['firstName'],'last_name':request.form['lastName'],
+        'email':request.form['email'],'mobile':request.form['mobile'],'address':request.form['address'],
+        'check-in-date':request.form['check-in-date'],'check-in-time-hour':request.form['check-in-time-hour'],
+        'check-in-time-minute':request.form['check-in-time-minute'],'check-out-date':request.form['check-out-date'],
+        'check-out-time-hour':request.form['check-out-time-hour'],'check-out-time-minute':request.form['check-out-time-minute']}
+
+        return render_template('sssm-roombooking.html',form=2)
 
 @app.route('/sssm-supportus')
 def supportus():
@@ -152,8 +161,7 @@ def trustees():
 
 @app.route('/favicon.ico')
 def favicon():
-    return send_from_directory(os.path.join(app.root_path, 'static/images'),
-                          'sssm-logo.png')
+    return send_from_directory(os.path.join(app.root_path, 'static/images'),'sssm-logo.png')
 
 @app.route('/js')
 def renderblog():
@@ -161,7 +169,6 @@ def renderblog():
     with open(filename) as blog_file:
         data = json.load(blog_file)
     return jsonify(data);
-
 
 if __name__ == "__main__":
     app.run(debug=True)

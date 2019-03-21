@@ -19,44 +19,14 @@
 			</div>
 		</section>
 
-		<div class="py-5 bg-light">
-			<div class="container form_body">
-				<div class="row">
-					<div class="col-md-12">
-						<form method="POST">
-							<div class="row">
-								<div class="col-md-6 mb-3">
-									<label for="firstName">First name</label>
-									<input type="text" class="form-control" name="firstName" required autofocus>
-								</div>
-								<div class="col-md-6 mb-3">
-									<label for="lastName">Last name</label>
-									<input type="text" class="form-control" name="lastName"required>
-								</div>
-							</div>
+		{% if form==1 %}
+			{% include 'query-form.html' %}
+		{% elif form==2 %}
+			{% include 'success.html' %}
+		{% elif form==3 %}
+			{% include 'failure.html' %}
+		{% endif %}
 
-							<div class="row">
-								<div class="col-md-6 mb-3">
-									<label for="email">Email</label>
-									<input type="text" class="form-control" placeholder="example@gmail.com" name="email" required>
-								</div>
-								<div class="col-md-6 mb-3">
-									<label for="mobile">Mobile</label>
-									<input type="number" class="form-control" name="mobile" placeholder="xxxxxxxxxx" required minlength="10" min="0">
-								</div>
-							</div>
-							<hr class="mb-4">
-							<div class="mb-3">
-								<h4 class="mb-3">Query</h4>
-								<textarea class="form-control" name="query" rows="6" required></textarea>
-							</div>
-							<hr class="mb-4">
-							<button class="btn btn-danger btn-lg btn-block" type="submit">Submit Query</button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
 	</main>
 
 	{% include 'footer.html' %}
