@@ -50,13 +50,13 @@ def Booking(booking):
 	cur.execute("""CREATE TABLE IF NOT EXISTS BOOKINGS('DateTime' TEXT, 'Firstname' TEXT,
 	'Lastname' TEXT ,'Email' TEXT,'Mobile' TEXT, 'Address' TEXT,'CheckInDate' TEXT,
 	'CheckInTimeHour' TEXT, 'CheckInTimeMinute' TEXT, 'CheckOutDate' TEXT,'ChechOutTimeHour' TEXT,
-	'CheckOutTimeMinute' TEXT);""")
+	'CheckOutTimeMinute' TEXT,'NumberOfPeople' TEXT,'RoomType' TEXT);""")
 	con.commit()
 
-	cur.execute("INSERT INTO BOOKINGS VALUES(?,?,?,?,?,?,?,?,?,?,?,?)",
+	cur.execute("INSERT INTO BOOKINGS VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
 		(booking['date_time'],booking['first_name'],booking['last_name'],booking['email'],booking['mobile'],
 		booking['address'],booking['check-in-date'],booking['check-in-time-hour'],
-		booking['check-in-time-minute'],booking['check-out-date,'],booking['check-out-time-hour'],
-		booking['check-out-time-minute']))
+		booking['check-in-time-minute'],booking['check-out-date'],booking['check-out-time-hour'],
+		booking['check-out-time-minute'],booking['no-of-people'],booking['room-type']))
 	con.commit()
 

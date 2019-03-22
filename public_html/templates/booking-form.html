@@ -2,7 +2,7 @@
 	<div class="container form_body">
 		<div class="row">
 			<div class="col-md-12">
-				<form>
+				<form method="POST">
 					<div class="row">
 						<div class="col-md-6 mb-3">
 							<label for="firstName">First name</label>
@@ -64,20 +64,20 @@
 
 					<div class="d-block my-3">
 						<div class="custom-control custom-radio">
-							<input id="ac-w-b-t" name="room-type" type="radio" class="custom-control-input" checked required>
-							<label class="custom-control-label" for="credit">AC with Bathroom Toilet</label>
+							<input id="ac-w-b-t" name="room-type" type="radio" class="custom-control-input" value="AC with Bathroom Toilet" checked required>
+							<label class="custom-control-label" for="ac-w-b-t">AC with Bathroom Toilet</label>
 						</div>
 						<div class="custom-control custom-radio">
-							<input id="nac-w-b-t" name="room-type" type="radio" class="custom-control-input" required>
-							<label class="custom-control-label" for="credit">Non-AC with Bathroom Toilet</label>
+							<input id="nac-w-b-t" name="room-type" type="radio" class="custom-control-input" value="Non-AC with Bathroom Toilet" required>
+							<label class="custom-control-label" for="nac-w-b-t">Non-AC with Bathroom Toilet</label>
 						</div>
 						<div class="custom-control custom-radio">
-							<input id="nac-w-b" name="room-type" type="radio" class="custom-control-input" required>
-							<label class="custom-control-label" for="credit">Non-AC with Bathroom without Toilet</label>
+							<input id="nac-w-b" name="room-type" type="radio" class="custom-control-input" value="Non-AC with Bathroom without Toilet<" required>
+							<label class="custom-control-label" for="nac-w-b">Non-AC with Bathroom without Toilet</label>
 						</div>
 						<div class="custom-control custom-radio">
-							<input id="nac" name="room-type" type="radio" class="custom-control-input" required>
-							<label class="custom-control-label" for="credit">Non-AC without Bathroom Toilet</label>
+							<input id="nac" name="room-type" type="radio" class="custom-control-input" value="Non-AC without Bathroom Toilet" required>
+							<label class="custom-control-label" for="nac">Non-AC without Bathroom Toilet</label>
 						</div>
 					</div>
 					<hr class="mb-4">

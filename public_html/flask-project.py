@@ -68,50 +68,34 @@ def membership():
         'mobile':request.form['mobile']}
 
 
-        if request.form['landline']!=  '':
-            member['landline']= request.form['landline']
-        if request.form['office']!=  '':
-            member['office']= request.form['office']
+        
+        member['landline']= request.form['landline']
+        member['office']= request.form['office']
 
-        if request.form['fm1-name']!=  '':
-            member['fm1-name']= request.form['fm1-name']
-        if request.form['fm1-relation']!=  '':
-            member['fm1-relation']= request.form['fm1-relation']
-        if request.form['fm1-birth-date']!=  '':
-            member['fm1-birth-date']= request.form['fm1-birth-date']
+        member['fm1-name']= request.form['fm1-name']
+        member['fm1-relation']= request.form['fm1-relation']
+        member['fm1-birth-date']= request.form['fm1-birth-date']
 
-        if request.form['fm2-name']!=  '':
-            member['fm2-name']= request.form['fm2-name']
-        if request.form['fm2-relation']!=  '':
-            member['fm2-relation']= request.form['fm2-relation']
-        if request.form['fm2-birth-date']!=  '':
-            member['fm2-birth-date']= request.form['fm2-birth-date']
+        member['fm2-name']= request.form['fm2-name']
+        member['fm2-relation']= request.form['fm2-relation']
+        member['fm2-birth-date']= request.form['fm2-birth-date']
 
-        if request.form['fm3-name']!=  '':
-            member['fm3-name']= request.form['fm3-name']
-        if request.form['fm3-relation']!=  '':
-            member['fm3-relation']= request.form['fm3-relation']
-        if request.form['fm3-birth-date']!=  '':
-            member['fm3-birth-date']= request.form['fm3-birth-date']
+        member['fm3-name']= request.form['fm3-name']
+        member['fm3-relation']= request.form['fm3-relation']
+        member['fm3-birth-date']= request.form['fm3-birth-date']
 
-        if request.form['fm4-name']!=  '':
-            member['fm4-name']= request.form['fm4-name']
-        if request.form['fm4-relation']!=  '':
-            member['fm4-relation']= request.form['fm4-relation']
-        if request.form['fm4-birth-date']!=  '':
-            member['fm4-birth-date']= request.form['fm4-birth-date']
+        member['fm4-name']= request.form['fm4-name']
+        member['fm4-relation']= request.form['fm4-relation']
+        member['fm4-birth-date']= request.form['fm4-birth-date']
 
-        if request.form['fm5-name']!=  '':
-            member['fm5-name']= request.form['fm5-name']
-        if request.form['fm5-relation']!=  '':
-            member['fm5-relation']= request.form['fm5-relation']
-        if request.form['fm5-birth-date']!=  '':
-            member['fm5-birth-date']= request.form['fm5-birth-date']
+        member['fm5-name']= request.form['fm5-name']
+        member['fm5-relation']= request.form['fm5-relation']
+        member['fm5-birth-date']= request.form['fm5-birth-date']
 
         member['date_time'] = datetime.datetime.now().strftime("%d %B %Y at %X")
 
         database_handler.Member(member)
-        flag=email_handler.send_membership_mail(member)
+        email_handler.send_membership_mail(member)
 
         
         return render_template('sssm-membership.html',form=2)
@@ -128,14 +112,14 @@ def query_page():
         query['date_time'] = datetime.datetime.now().strftime("%d %B %Y at %X")
 
         database_handler.Query(query)
-        flag=email_handler.send_query_mail(query)
+        email_handler.send_query_mail(query)
 
         
         return render_template('sssm-query.html',form=2)
 
 
 
-@app.route('/sssm-roombooking')
+@app.route('/sssm-roombooking',methods = ['POST','GET'])
 def roombooking():
     #incomplete
     if request.method == "GET":
@@ -145,7 +129,13 @@ def roombooking():
         'email':request.form['email'],'mobile':request.form['mobile'],'address':request.form['address'],
         'check-in-date':request.form['check-in-date'],'check-in-time-hour':request.form['check-in-time-hour'],
         'check-in-time-minute':request.form['check-in-time-minute'],'check-out-date':request.form['check-out-date'],
-        'check-out-time-hour':request.form['check-out-time-hour'],'check-out-time-minute':request.form['check-out-time-minute']}
+        'check-out-time-hour':request.form['check-out-time-hour'],'check-out-time-minute':request.form['check-out-time-minute'],
+        'no-of-people':request.form['people'],'room-type':request.form['room-type']}
+
+        booking['date_time'] = datetime.datetime.now().strftime("%d %B %Y at %X")
+
+        database_handler.Booking(booking)
+        email_handler.send_booking_mail(booking)
 
         return render_template('sssm-roombooking.html',form=2)
 

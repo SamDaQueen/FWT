@@ -156,7 +156,7 @@ def send_membership_mail(member):
 
 	send_and_close(server,msg.as_string())
 
-def send_booking_mail():
+def send_booking_mail(booking):
 
 	server = login()
 
@@ -174,7 +174,7 @@ def send_booking_mail():
 			<h4>Address</h4>
 			<p>"""+booking['address']+"""</p>
 
-			<table>
+			<table >
 				<tr>
 					<td></td>
 					<th>Date</th>
@@ -191,6 +191,10 @@ def send_booking_mail():
 					<td>"""+booking['check-out-time-hour']+":"+booking['check-out-time-minute']+"""</td>
 				</tr>
 			</table>
+
+			<br>
+			<h4>Number of People: </h4>"""+booking['no-of-people']+"""
+			<h4>Room Type: </h4>"""+booking['room-type']+"""
 			<br>
 			<h4>This email can be replied to with an <a href = \" mailto:"""+booking['email']+""" \">email</a> or call at +91"""+ booking['mobile'] + """</h4>
 		</body>
