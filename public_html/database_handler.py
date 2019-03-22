@@ -11,10 +11,12 @@ def Query(query):
 
 	con, cur = opendb()
 
-	cur.execute("CREATE TABLE IF NOT EXISTS QUERYS('DateTime' TEXT, 'Firstname' TEXT, 'Lastname' TEXT ,'Email' TEXT, 'Mobile' TEXT, 'Query' TEXT);")
+	cur.execute("""CREATE TABLE IF NOT EXISTS QUERYS('DateTime' TEXT, 'Firstname' TEXT,
+	 'Lastname' TEXT ,'Email' TEXT, 'Mobile' TEXT, 'Query' TEXT);""")
 	con.commit()
 
-	cur.execute("INSERT INTO QUERYS VALUES(?,?,?,?,?,?)",(query['date_time'],query['first_name'],query['last_name'],query['email'],query['mobile'],query['query']))
+	cur.execute("INSERT INTO QUERYS VALUES(?,?,?,?,?,?)",(query['date_time'],query['first_name'],
+		query['last_name'],query['email'],query['mobile'],query['query']))
 	con.commit()
 
 def Member(member):
@@ -39,5 +41,22 @@ def Member(member):
 		member['fm3-birth-date'],member['fm4-name'],member['fm4-relation'],
 		member['fm4-birth-date'],member['fm5-name'],member['fm5-relation'],
 		member['fm5-birth-date']))
-	con.commit()	 
+	con.commit()	
+
+def Booking(booking):
+
+	con, cur = opendb()
+
+	cur.execute("""CREATE TABLE IF NOT EXISTS BOOKINGS('DateTime' TEXT, 'Firstname' TEXT,
+	'Lastname' TEXT ,'Email' TEXT,'Mobile' TEXT, 'Address' TEXT,'CheckInDate' TEXT,
+	'CheckInTimeHour' TEXT, 'CheckInTimeMinute' TEXT, 'CheckOutDate' TEXT,'ChechOutTimeHour' TEXT,
+	'CheckOutTimeMinute' TEXT);""")
+	con.commit()
+
+	cur.execute("INSERT INTO BOOKINGS VALUES(?,?,?,?,?,?,?,?,?,?,?,?)",
+		(booking['date_time'],booking['first_name'],booking['last_name'],booking['email'],booking['mobile'],
+		booking['address'],booking['check-in-date'],booking['check-in-time-hour'],
+		booking['check-in-time-minute'],booking['check-out-date,'],booking['check-out-time-hour'],
+		booking['check-out-time-minute']))
+	con.commit()
 

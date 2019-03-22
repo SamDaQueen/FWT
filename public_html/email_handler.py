@@ -21,10 +21,10 @@ def send_query_mail(query):
 	
 	server = login()
 
-	msg_2 = MIMEMultipart("alternative")
-	msg_2['Subject'] = 'Query by '  + query['first_name']+" "+query['last_name']
-	msg_2['From'] = 'sssm.mum@gmail.com'
-	msg_2['To'] = "gncis8@gmail.com"
+	msg = MIMEMultipart("alternative")
+	msg['Subject'] = 'Query by '  + query['first_name']+" "+query['last_name']
+	msg['From'] = 'sssm.mum@gmail.com'
+	msg['To'] = "gncis8@gmail.com"
 
 	html_txt = """
 	<html>
@@ -43,20 +43,18 @@ def send_query_mail(query):
 
 	part = MIMEText(html_txt, 'html')
 
-	msg_2.attach(part)
+	msg.attach(part)
 
-	send_and_close(server,msg_2.as_string())
-
-	return 'It works'
+	send_and_close(server,msg.as_string())
 
 def send_membership_mail(member):
 
 	server = login()
 
-	msg_2 = MIMEMultipart("alternative")
-	msg_2['Subject'] = 'New member request by '+ member['first_name']+" "+member['last_name']
-	msg_2['From'] = 'sssm.mum@gmail.com'
-	msg_2['To'] = "gncis8@gmail.com"
+	msg = MIMEMultipart("alternative")
+	msg['Subject'] = 'New member request by '+ member['first_name']+" "+member['last_name']
+	msg['From'] = 'sssm.mum@gmail.com'
+	msg['To'] = "gncis8@gmail.com"
 
 	no_of_family=0
 
@@ -154,14 +152,53 @@ def send_membership_mail(member):
 
 	part = MIMEText(html_txt, 'html')
 
-	msg_2.attach(part)
+	msg.attach(part)
 
-	send_and_close(server,msg_2.as_string())
-
-	return 'YEs'
+	send_and_close(server,msg.as_string())
 
 def send_booking_mail():
 
 	server = login()
 
-	send_and_close(server,msg_2.as_string())
+	msg = MIMEMultipart("alternative")
+	msg['Subject'] = 'Booking Request by '  + booking['first_name']+" "+booking['last_name']
+	msg['From'] = 'sssm.mum@gmail.com'
+	msg['To'] = "gncis8@gmail.com"
+
+	html_txt = """
+	<html>
+		<body>
+
+			<h2>Booking Request by """ + booking['first_name']+" "+booking['last_name']+""" on """+booking['date_time']+"""</h2>
+			
+			<h4>Address</h4>
+			<p>"""+booking['address']+"""</p>
+
+			<table>
+				<tr>
+					<td></td>
+					<th>Date</th>
+					<th>Time</th>
+				</tr>
+				<tr>
+					<th>Check In</th>
+					<td>"""+booking['check-in-date']+"""</td>
+					<td>"""+booking['check-in-time-hour']+":"+booking['check-in-time-minute']+"""</td>
+				</tr>
+				<tr>
+					<th>Check Out</th>
+					<td>"""+booking['check-out-date']+"""</td>
+					<td>"""+booking['check-out-time-hour']+":"+booking['check-out-time-minute']+"""</td>
+				</tr>
+			</table>
+			<br>
+			<h4>This email can be replied to with an <a href = \" mailto:"""+booking['email']+""" \">email</a> or call at +91"""+ booking['mobile'] + """</h4>
+		</body>
+	</html>
+	"""
+
+	part = MIMEText(html_txt, 'html')
+
+	msg.attach(part)
+
+	send_and_close(server,msg.as_string())
