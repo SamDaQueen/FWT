@@ -42,8 +42,8 @@ def downloads():
     		return send_file('static/bhajans/bhajanbook.pdf')
     	if name=='b388':
     		return send_file('static/bhajans/bhajan388.pdf')
-    	if name=='lalgulab':
-    		return send_file('static/bhajans/lalgulab.jpg', as_attachment=True, attachment_filename='Bhajan_lal_gulab.jpg')
+    	if name=='shiv':
+    		return send_file('static/bhajans/shiv.zip', as_attachment=True, attachment_filename='Bhajan_lal_gulab.zip')
     elif(request.method=='GET'):
     	return render_template('sssm-downloads.html')
 
