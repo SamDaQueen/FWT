@@ -101,5 +101,24 @@ def renderblog():
         data = json.load(blog_file)
     return jsonify(data);
 
+
+@app.route('/getfile')
+def getfile():
+    if request.method == 'GET':
+
+        # os.path.join is used so that paths work in every operating system
+        file = os.path.join(app.static_folder,'txt.txt')
+
+        # You should use os.path.join here too.
+        with open(file) as f:
+            file_content = f.read()
+
+        return render_template('sssm-home.html',f=file_content)     
+
+
+    else:
+        result = request.args.get['myfile']
+    return result
+
 if __name__ == "__main__":
     app.run(debug=True)
