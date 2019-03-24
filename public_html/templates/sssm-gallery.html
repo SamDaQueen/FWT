@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 	<title>SSSM-Gallery</title>
 	<meta charset="utf-8">
@@ -8,10 +8,32 @@
 	<link rel="stylesheet" type="text/css" href="../static/css/profile_style.css">
 	<link rel="stylesheet" type="text/css" href="../static/css/common.css">
 	<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script >
+		$(document).ready(function(){
+			var ht= $("img").height(),      
+wd=$("img").width(),      
+mult=1.5; //change to the no. of times you want to increase your image 
+      //size.
+$("img").on('mouseenter', function(){
+$(this).attr("height","338");
+$(this).attr("width","150%");
+$(this).animate({height: ht*mult,
+                 width: wd*mult}, 500);
+});
+$("img").on('mouseleave', function(){
+$(this).attr("height","225");
+$(this).attr("width","100%");
+$(this).animate({height: ht,
+                 width: wd}, 500);
+})
+	
+});
+    </script>
 </head>
 <body>
 	{% include 'header.html' %}
-
 	<main>
 		<section class="jumbotron text-center">
 			<div class="container">
@@ -19,94 +41,27 @@
 				<p class="lead text-muted">Here you can find images of our Mandal and its events.</p>
 			</div>
 		</section>
+		
 
 		<div class="py-5 bg-light">
 			<div class="container">
 
 				<div class="row">
-					<div class="col-md-4">
-						<div class="card mb-4 shadow-sm">
-							<img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../static/images/A.jpg" alt="Random Image">
-							<div class="card-body">
-								<p class="card-text">Event description. Event description. Event description.</p>
-								<small class="text-muted">16/03/2019</small>
+					
+					
+					{% for image_name in image_names %}
+					
+						<div class="col-md-4">
+							<div class="card mb-4 shadow-sm">
+								<img class="bd-placeholder-img card-img-top" width="100%" height="225" src="static/images/gallery/{{image_name}}" alt="Random Image">
+								<div class="card-body">
+									
+									<small class="text-muted">16/03/2019</small>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="card mb-4 shadow-sm">
-							<img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../static/images/A.jpg" alt="Random Image">
-							<div class="card-body">
-								<p class="card-text">Event description. Event description. Event description.</p>
-								<small class="text-muted">16/03/2019</small>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="card mb-4 shadow-sm">
-							<img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../static/images/A.jpg" alt="Random Image">
-							<div class="card-body">
-								<p class="card-text">Event description. Event description. Event description.</p>
-								<small class="text-muted">16/03/2019</small>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-md-4">
-						<div class="card mb-4 shadow-sm">
-							<img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../static/images/A.jpg" alt="Random Image">
-							<div class="card-body">
-								<p class="card-text">Event description. Event description. Event description.</p>
-								<small class="text-muted">16/03/2019</small>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="card mb-4 shadow-sm">
-							<img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../static/images/A.jpg" alt="Random Image">
-							<div class="card-body">
-								<p class="card-text">Event description. Event description. Event description.</p>
-								<small class="text-muted">16/03/2019</small>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="card mb-4 shadow-sm">
-							<img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../static/images/A.jpg" alt="Random Image">
-							<div class="card-body">
-								<p class="card-text">Event description. Event description. Event description.</p>
-								<small class="text-muted">16/03/2019</small>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-md-4">
-						<div class="card mb-4 shadow-sm">
-							<img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../static/images/A.jpg" alt="Random Image">
-							<div class="card-body">
-								<p class="card-text">Event description. Event description. Event description.</p>
-								<small class="text-muted">16/03/2019</small>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="card mb-4 shadow-sm">
-							<img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../static/images/A.jpg" alt="Random Image">
-							<div class="card-body">
-								<p class="card-text">Event description. Event description. Event description.</p>
-								<small class="text-muted">16/03/2019</small>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="card mb-4 shadow-sm">
-							<img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../static/images/A.jpg" alt="Random Image">
-							<div class="card-body">
-								<p class="card-text">Event description. Event description. Event description.</p>
-								<small class="text-muted">16/03/2019</small>
-							</div>
-						</div>
-					</div>
+					{% endfor %}
+					
 				</div>
 			</div>
 		</div>
@@ -116,5 +71,6 @@
 	
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
 </body>
 </html>

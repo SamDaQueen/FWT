@@ -18,7 +18,11 @@ def home():
 @app.route('/sssm-gallery')
 def gallery():
     
-    return render_template('sssm-gallery.html')
+    print("entering loop")
+    image_names=os.listdir('./static/images/gallery')
+    print("2")
+    print(image_names)
+    return render_template('sssm-gallery.html',image_names=image_names)
 
 @app.route('/sssm-committee')
 def commitee():
@@ -72,25 +76,25 @@ def membership():
         member['landline']= request.form['landline']
         member['office']= request.form['office']
 
-        member['fm1-name']= request.form['fm1-name']
-        member['fm1-relation']= request.form['fm1-relation']
-        member['fm1-birth-date']= request.form['fm1-birth-date']
+        member['fm1_name']= request.form['fm1_name']
+        member['fm1_relation']= request.form['fm1_relation']
+        member['fm1_birth_date']= request.form['fm1_birth_date']
 
-        member['fm2-name']= request.form['fm2-name']
-        member['fm2-relation']= request.form['fm2-relation']
-        member['fm2-birth-date']= request.form['fm2-birth-date']
+        member['fm2_name']= request.form['fm2_name']
+        member['fm2_relation']= request.form['fm2_relation']
+        member['fm2_birth_date']= request.form['fm2_birth_date']
 
-        member['fm3-name']= request.form['fm3-name']
-        member['fm3-relation']= request.form['fm3-relation']
-        member['fm3-birth-date']= request.form['fm3-birth-date']
+        member['fm3_name']= request.form['fm3_name']
+        member['fm3_relation']= request.form['fm3_relation']
+        member['fm3_birth_date']= request.form['fm3_birth_date']
 
-        member['fm4-name']= request.form['fm4-name']
-        member['fm4-relation']= request.form['fm4-relation']
-        member['fm4-birth-date']= request.form['fm4-birth-date']
+        member['fm4_name']= request.form['fm4_name']
+        member['fm4_relation']= request.form['fm4_relation']
+        member['fm4_birth_date']= request.form['fm4_birth_date']
 
-        member['fm5-name']= request.form['fm5-name']
-        member['fm5-relation']= request.form['fm5-relation']
-        member['fm5-birth-date']= request.form['fm5-birth-date']
+        member['fm5_name']= request.form['fm5_name']
+        member['fm5_relation']= request.form['fm5_relation']
+        member['fm5_birth_date']= request.form['fm5_birth_date']
 
         member['date_time'] = datetime.datetime.now().strftime("%d %B %Y at %X")
 
@@ -146,8 +150,10 @@ def supportus():
 
 @app.route('/sssm-trustees')
 def trustees():
-    
     return render_template('sssm-trustees.html')
+
+
+
 
 @app.route('/favicon.ico')
 def favicon():
@@ -161,4 +167,7 @@ def renderblog():
     return jsonify(data);
 
 if __name__ == "__main__":
-    app.run(debug=True)
+     app.run(debug=True)
+
+
+

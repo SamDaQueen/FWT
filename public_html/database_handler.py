@@ -25,22 +25,22 @@ def Member(member):
 	
 	cur.execute("""CREATE TABLE IF NOT EXISTS MEMBERS('DateTime' TEXT, 'Firstname' TEXT,
 	'Lastname' TEXT ,'Email' TEXT, 'Birthdate' TEXT, 'Address' TEXT,'Occupation' TEXT,
-	'Mobile' TEXT,'Landline' TEXT,'Office' TEXT, 'fm1-name' TEXT, 'fm1-relation' TEXT,
-	'fm1-birth-date' TEXT, 'fm2-name' TEXT, 'fm2-relation' TEXT,'fm2-birth-date' TEXT,
-	'fm3-name' TEXT, 'fm3-relation' TEXT,'fm3-birth-date' TEXT, 'fm4-name' TEXT,
-	'fm4-relation' TEXT,'fm4-birth-date' TEXT, 'fm5-name' TEXT,'fm5-relation' TEXT,
-	'fm5-birth-date' TEXT);""")
+	'Mobile' TEXT,'Landline' TEXT,'Office' TEXT, 'fm1_name' TEXT, 'fm1_relation' TEXT,
+	'fm1_birth_date' TEXT, 'fm2_name' TEXT, 'fm2_relation' TEXT,'fm2_birth_date' TEXT,
+	'fm3_name' TEXT, 'fm3_relation' TEXT,'fm3_birth_date' TEXT, 'fm4_name' TEXT,
+	'fm4_relation' TEXT,'fm4_birth_date' TEXT, 'fm5_name' TEXT,'fm5_relation' TEXT,
+	'fm5_birth_date' TEXT);""")
 	con.commit()
 
 	cur.execute("INSERT INTO MEMBERS VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
 		(member['date_time'],member['first_name'],member['last_name'],member['email'],
 		member['birth_date'],member['address'],member['occupation'],member['mobile'],
-		member['landline'],member['office'],member['fm1-name'],member['fm1-relation'],
-		member['fm1-birth-date'],member['fm2-name'],member['fm2-relation'],
-		member['fm2-birth-date'],member['fm3-name'],member['fm3-relation'],
-		member['fm3-birth-date'],member['fm4-name'],member['fm4-relation'],
-		member['fm4-birth-date'],member['fm5-name'],member['fm5-relation'],
-		member['fm5-birth-date']))
+		member['landline'],member['office'],member['fm1_name'],member['fm1_relation'],
+		member['fm1_birth_date'],member['fm2_name'],member['fm2_relation'],
+		member['fm2_birth_date'],member['fm3_name'],member['fm3_relation'],
+		member['fm3_birth_date'],member['fm4_name'],member['fm4_relation'],
+		member['fm4_birth_date'],member['fm5_name'],member['fm5_relation'],
+		member['fm5_birth_date']))
 	con.commit()	
 
 def Booking(booking):
