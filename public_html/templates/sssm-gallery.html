@@ -12,21 +12,16 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script >
 		$(document).ready(function(){
-			var ht= $("img").height(),      
-wd=$("img").width(),      
-mult=1.5; //change to the no. of times you want to increase your image 
-      //size.
+			  
+ 
 $("img").on('mouseenter', function(){
 $(this).attr("height","338");
 $(this).attr("width","150%");
-$(this).animate({height: ht*mult,
-                 width: wd*mult}, 500);
+
 });
 $("img").on('mouseleave', function(){
 $(this).attr("height","225");
 $(this).attr("width","100%");
-$(this).animate({height: ht,
-                 width: wd}, 500);
 })
 	
 });

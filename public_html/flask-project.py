@@ -12,6 +12,11 @@ def base():
 
 @app.route('/sssm-home')
 def home():
+    print("entering loop")
+    image_names=os.listdir('./static/images/gallery/home')
+    print("2")
+    print(image_names)
+    return render_template('sssm-home.html',image_names=image_names)
     
     return render_template('sssm-home.html')
 
@@ -36,8 +41,7 @@ def developers():
 
 @app.route('/sssm-dharamshala')
 def dharamshala():
-    
-    return render_template('sssm-dharamshala.html')
+       return render_template('sssm-dharamshala.html')
 
 @app.route('/sssm-downloads')
 def downloads():
