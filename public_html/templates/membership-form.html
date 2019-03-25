@@ -1,118 +1,118 @@
 <div class="py-5 bg-light">
-			<div class="container form_body">
-				<div class="row">
-					<div class="col-md-12">
-						<form method="POST">
-							<div class="row">
-								<div class="col-md-6 mb-3">
-									<label for="firstName">First name</label>
-									<input type="text" class="form-control" name="firstName" value="Samreen" required autofocus>
-								</div>
-								<div class="col-md-6 mb-3">
-									<label for="lastName">Last name</label>
-									<input type="text" class="form-control" name="lastName" value="Reyaz" required>
-								</div>
-							</div>
-
-							<div class="row">
-								<div class="col-md-6 mb-3">
-									<label for="email">Email</label>
-									<input type="text" class="form-control" value="example@gmail.com" name="email" required>
-								</div>
-								<div class="col-md-6 mb-3">
-									<label for="birth-date">Birth Date</label>
-									<input type="date" class="form-control" name="birth-date" value="2019-12-31" max="2010-12-31" min="1950-12-31" required>
-								</div>
-							</div>
-
-							<div class="mb-3">
-								<label for="address">Address</label>
-								<textarea class="form-control" name="address" rows="5" required></textarea>
-							</div>
-
-							<div class="mb-3">
-								<label for="occupation">Occupation</label>
-								<input type="text" class="form-control" name="occupation" value="Student" required>
-							</div>
-
-							<div class="row">
-								<div class="col-md-4 mb-3">
-									<label for="landline">Landline</label>
-									<input type="number" class="form-control" name="landline" value="02226658646" minlength="8" min="0">
-								</div>
-								<div class="col-md-4 mb-3">
-									<label for="office">Office</label>
-									<input type="number" class="form-control" name="office" value="02226658646" minlength="8" min="0">
-								</div>
-								<div class="col-md-4 mb-3">
-									<label for="mobile">Mobile</label>
-									<input type="number" class="form-control" name="mobile" value="9833207530" required minlength="10" min="0">
-								</div>
-							</div>
-							<hr class="mb-4">
-
-							<h4 class="mb-3">Family members</h4>
-
-							<div class="row">
-								<div class="col-md-4 mb-3">
-									<input type="text" class="form-control" name="fm1-name" value="Name" required>
-								</div>
-								<div class="col-md-4 mb-3">
-									<input type="text" class="form-control" name="fm1-relation" value="Relation" required>
-								</div>
-								<div class="col-md-4 mb-3">
-									<input type="date" class="form-control" name="fm1-birth-date" value="1998-12-31" max="2010-12-31" min="1950-12-31" required>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-md-4 mb-3">
-									<input type="text" class="form-control" name="fm2-name" value="Name" required>
-								</div>
-								<div class="col-md-4 mb-3">
-									<input type="text" class="form-control" name="fm2-relation" value="Relation" required>
-								</div>
-								<div class="col-md-4 mb-3">
-									<input type="date" class="form-control" name="fm2-birth-date" value="Birth date" max="2010-12-31" min="1950-12-31" required>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-md-4 mb-3">
-									<input type="text" class="form-control" name="fm3-name" value="Name" required>
-								</div>
-								<div class="col-md-4 mb-3">
-									<input type="text" class="form-control" name="fm3-relation" value="Relation" required>
-								</div>
-								<div class="col-md-4 mb-3">
-									<input type="date" class="form-control" name="fm3-birth-date" value="1998-12-31" max="2010-12-31" min="1950-12-31" required>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-md-4 mb-3">
-									<input type="text" class="form-control" name="fm4-name" value="Name" required>
-								</div>
-								<div class="col-md-4 mb-3">
-									<input type="text" class="form-control" name="fm4-relation" value="Relation" required>
-								</div>
-								<div class="col-md-4 mb-3">
-									<input type="date" class="form-control" name="fm4-birth-date" value="1998-12-31" max="2010-12-31" min="1950-12-31" required>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-md-4 mb-3">
-									<input type="text" class="form-control" name="fm5-name" value="Name" required>
-								</div>
-								<div class="col-md-4 mb-3">
-									<input type="text" class="form-control" name="fm5-relation" value="Relation" required>
-								</div>
-								<div class="col-md-4 mb-3">
-									<input type="date" class="form-control" name="fm5-birth-date" value="1998-12-31" max="2010-12-31" min="1950-12-31" required>
-								</div>
-							</div>
-
-							<hr class="mb-4">
-							<button class="btn btn-danger btn-lg btn-block" type="submit">Submit Membership Form</button>
-						</form>
+	<div class="container form_body">
+		<div class="row">
+			<div class="col-md-12">
+				<form name="memForm" onsubmit = "formValidate()"  method="POST">
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<label for="firstName">First name</label>
+							<input type="text" class="form-control" name="firstName" value="Samreen" required autofocus>
+						</div>
+						<div class="col-md-6 mb-3">
+							<label for="lastName">Last name</label>
+							<input type="text" class="form-control" name="lastName" value="Reyaz" required>
+						</div>
 					</div>
-				</div>
+
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<label for="email">Email</label>
+							<input type="email" class="form-control" value="example@gmail.com" name="email" required>
+						</div>
+						<div class="col-md-6 mb-3">
+							<label for="birth-date">Birth Date</label>
+							<input type="date" class="form-control" name="birth-date" value="2019-12-31" max="2010-12-31" min="1950-12-31" required>
+						</div>
+					</div>
+
+					<div class="mb-3">
+						<label for="address">Address</label>
+						<textarea class="form-control" name="address" rows="5" required></textarea>
+					</div>
+
+					<div class="mb-3">
+						<label for="occupation">Occupation</label>
+						<input type="text" class="form-control" name="occupation" value="Student" required>
+					</div>
+
+					<div class="row">
+						<div class="col-md-4 mb-3">
+							<label for="landline">Landline</label>
+							<input type="number" class="form-control" name="landline" value="02226658646" minlength="8" min="0">
+						</div>
+						<div class="col-md-4 mb-3">
+							<label for="office">Office</label>
+							<input type="number" class="form-control" name="office" value="02226658646" minlength="8" min="0">
+						</div>
+						<div class="col-md-4 mb-3">
+							<label for="mobile">Mobile</label>
+							<input type="number" class="form-control" name="mobile" value="9833207530" required minlength="10" min="0">
+						</div>
+					</div>
+					<hr class="mb-4">
+
+					<h4 class="mb-3">Family members</h4>
+
+					<div class="row">
+						<div class="col-md-4 mb-3">
+							<input type="text" class="form-control" name="fm1_name" value="Name" required>
+						</div>
+						<div class="col-md-4 mb-3">
+							<input type="text" class="form-control" name="fm1_relation" value="Relation" required>
+						</div>
+						<div class="col-md-4 mb-3">
+							<input type="date" class="form-control" name="fm1_birth-date" value="1998-12-31" max="2010-12-31" min="1950-12-31" required>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 mb-3">
+							<input type="text" class="form-control" name="fm2_name" value="Name" required>
+						</div>
+						<div class="col-md-4 mb-3">
+							<input type="text" class="form-control" name="fm2_relation" value="Relation" required>
+						</div>
+						<div class="col-md-4 mb-3">
+							<input type="date" class="form-control" name="fm2_birth-date" value="Birth date" max="2010-12-31" min="1950-12-31" required>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 mb-3">
+							<input type="text" class="form-control" name="fm3_name" value="Name" required>
+						</div>
+						<div class="col-md-4 mb-3">
+							<input type="text" class="form-control" name="fm3_relation" value="Relation" required>
+						</div>
+						<div class="col-md-4 mb-3">
+							<input type="date" class="form-control" name="fm3_birth-date" value="1998-12-31" max="2010-12-31" min="1950-12-31" required>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 mb-3">
+							<input type="text" class="form-control" name="fm4_name" value="Name" required>
+						</div>
+						<div class="col-md-4 mb-3">
+							<input type="text" class="form-control" name="fm4_relation" value="Relation" required>
+						</div>
+						<div class="col-md-4 mb-3">
+							<input type="date" class="form-control" name="fm4_birth-date" value="1998-12-31" max="2010-12-31" min="1950-12-31" required>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 mb-3">
+							<input type="text" class="form-control" name="fm5_name" value="Name" required>
+						</div>
+						<div class="col-md-4 mb-3">
+							<input type="text" class="form-control" name="fm5_relation" value="Relation" required>
+						</div>
+						<div class="col-md-4 mb-3">
+							<input type="date" class="form-control" name="fm5_birth-date" value="1998-12-31" max="2010-12-31" min="1950-12-31" required>
+						</div>
+					</div>
+
+					<hr class="mb-4">
+					<button class="btn btn-danger btn-lg btn_block" type="submit">Submit Membership Form</button>
+				</form>
 			</div>
 		</div>
+	</div>
+</div>

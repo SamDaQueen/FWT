@@ -28,12 +28,7 @@
 						<div class="carousel-caption text-left">
 							<div class="inner-banner">
 								<h1>Dharamshala</h1>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								{% include 'content/home.html' %}
 							</div>
 							<button class="btn btn-danger">Contact us</button>
 						</div>
@@ -45,12 +40,7 @@
 						<div class="carousel-caption text-left">
 							<div class="inner-banner">
 								<h1>Latest Event</h1>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								{% include 'content/home.html' %}
 							</div>
 							<form action="sssm-calender">
 								<button class="btn btn-danger">See all events</button>
@@ -62,15 +52,25 @@
 					<div class="mx-0">
 						<img class="d-block w-100" src="../static/images/C.jpg" alt="First slide">
 						<div class="carousel-caption text-left">
-							<div class="inner-banner">
+							
 								<h1>Gallery</h1>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-							</div>
+								
+
+									<div class="row">
+										
+										
+										{% for image_name in image_names %}
+										
+											<div class="col-md-4">
+												<div class="card mb-4 shadow-sm">
+													<img class="bd-placeholder-img card-img-top" width="100%" height="100" src="static/images/gallery/home/{{image_name}}" alt="Random Image">
+													
+												</div>
+											</div>
+										{% endfor %}
+
+									</div>
+							
 							<button class="btn btn-danger">Explore</button>
 						</div>
 					</div>
@@ -90,7 +90,7 @@
 			<div class="row featurette">
 				<div class="col-md-7 order-md-2">
 					<h2 class="featurette-heading">Find more about us. <span class="text-muted">Read on.</span></h2>
-					<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+					{% include 'content/home.html' %}
 				</div>
 				<div class="col-md-5 order-md-1">
 					<img src="../static/images/A.jpg" class="d-block w-100">
@@ -102,7 +102,7 @@
 			<div class="row featurette">
 				<div class="col-md-7">
 					<h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-					<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+					{% include 'content/home.html' %}
 				</div>
 				<div class="col-md-5">
 					<img src="../static/images/B.jpg" class="d-block w-100">
@@ -114,7 +114,8 @@
 			<div class="row featurette">
 				<div class="col-md-7 order-md-2">
 					<h2 class="featurette-heading">Find more about us. <span class="text-muted">Read on.</span></h2>
-					<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+					{% include 'content/home.html' %}
+					
 				</div>
 				<div class="col-md-5 order-md-1">
 					<img src="../static/images/A.jpg" class="d-block w-100">

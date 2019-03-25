@@ -60,20 +60,20 @@ def send_membership_mail(member):
 
 	family_html = ''
 
-	if member['fm1-name'] != '':
-		family_html += '<tr><td>'+member['fm1-name']+'</td> <td>'+member['fm1-relation']+'</td> <td>'+member['fm1-birth-date']+'</td> </tr>'
+	if member['fm1_name'] != '':
+		family_html += '<tr><td>'+member['fm1_name']+'</td> <td>'+member['fm1_relation']+'</td> <td>'+member['fm1_birth_date']+'</td> </tr>'
 		no_of_family +=1
-	if member['fm2-name'] != '':
-		family_html += '<tr><td>'+member['fm2-name']+'</td> <td>'+member['fm2-relation']+'</td> <td>'+member['fm2-birth-date']+'</td> </tr>'
+	if member['fm2_name'] != '':
+		family_html += '<tr><td>'+member['fm2_name']+'</td> <td>'+member['fm2_relation']+'</td> <td>'+member['fm2_birth_date']+'</td> </tr>'
 		no_of_family +=1
-	if member['fm3-name'] != '':
-		family_html += '<tr><td>'+member['fm3-name']+'</td> <td>'+member['fm3-relation']+'</td> <td>'+member['fm3-birth-date']+'</td> </tr>'
+	if member['fm3_name'] != '':
+		family_html += '<tr><td>'+member['fm3_name']+'</td> <td>'+member['fm3_relation']+'</td> <td>'+member['fm3_birth_date']+'</td> </tr>'
 		no_of_family +=1
-	if member['fm4-name'] != '':
-		family_html += '<tr><td>'+member['fm4-name']+'</td> <td>'+member['fm4-relation']+'</td> <td>'+member['fm4-birth-date']+'</td> </tr>'
+	if member['fm4_name'] != '':
+		family_html += '<tr><td>'+member['fm4_name']+'</td> <td>'+member['fm4_relation']+'</td> <td>'+member['fm4_birth_date']+'</td> </tr>'
 		no_of_family +=1
-	if member['fm5-name'] != '':
-		family_html += '<tr><td>'+member['fm5-name']+'</td> <td>'+member['fm5-relation']+'</td> <td>'+member['fm5-birth-date']+'</td> </tr>'
+	if member['fm5_name'] != '':
+		family_html += '<tr><td>'+member['fm5_name']+'</td> <td>'+member['fm5_relation']+'</td> <td>'+member['fm5_birth_date']+'</td> </tr>'
 		no_of_family +=1
 
 	if no_of_family > 0:
