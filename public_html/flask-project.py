@@ -63,6 +63,11 @@ def mandal():
     
     return render_template('sssm-mandal.html')
 
+@app.route('/sssm-404')
+def error():
+    
+    return render_template('sssm-404.html')
+
 @app.route('/sssm-membership',methods = ['POST','GET'])
 def membership():
 

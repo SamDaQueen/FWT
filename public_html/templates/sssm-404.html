@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>SSSM-404</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/form_style.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/common.css">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+	<style type="text/css">
+		main	{
+			align-items: center;
+			text-align: center;
+		}
+		h1		{
+			font-size: 200px;
+			color: #DC3545;
+		}
+	</style>
+</head>
+<body>
+	{% include 'header.html' %}
+
+	<main>
+		<div class="py-5 bg-light">
+	<div class="container form_body">
+		<div class="row">
+			<div class="col-md-12">
+				<h3>Oops!<br>We could not find the page you were looking for :(</h3><br>
+				<h1>404!</h1>
+				<h4>Please go back to home page and try again.</h4>
+			</div>
+		</div>
+	</div>
+</div>
+	</main>
+
+	{% include 'footer.html' %}
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
