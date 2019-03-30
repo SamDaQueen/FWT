@@ -12,14 +12,14 @@
 	<link href="fonts.googleapis.com/css?family=Hind"  rel="stylesheet">
 	<script>
 
-$(document).ready(function(){
-	$('#eng').hide();
-  $("#trans").click(function(){
-    $("#hin").toggle();
-    $("#eng").toggle();
-  });
-});
-</script>
+		$(document).ready(function(){
+			$('#eng').hide();
+			$("#trans").click(function(){
+				$("#hin").toggle();
+				$("#eng").toggle();
+			});
+		});
+	</script>
 	
 </head>
 <body>
@@ -31,12 +31,14 @@ $(document).ready(function(){
 				<h1 class="jumbotron-heading">Shyam Baba</h1>
 				<p class="lead text-muted">...</p>
 			</div>
-			<div id="trans">toggle between hindi and english</div>
 		</section>
 
 		<div class="py-5 bg-light">
 			<div class="container">
 				<div class="row">
+					<div class="col-md-8 my-2">
+						<button id="trans" class="btn btn-sm btn-danger">Toggle - Hindi/English</button>
+					</div>
 					<div class="col-md-8" id="hin">
 
 						{% include 'content/shyambabahin.html' %}
