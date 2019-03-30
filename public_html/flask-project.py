@@ -1,6 +1,6 @@
 import database_handler
 import datetime
-from flask import Flask, render_template, send_from_directory, json, request, jsonify,request,abort 
+from flask import Flask, render_template, send_from_directory, json, request, jsonify, send_file, request,abort 
 import os
 import email_handler
 app = Flask(__name__)

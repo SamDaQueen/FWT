@@ -8,6 +8,11 @@
 	<link rel="stylesheet" type="text/css" href="../static/css/profile_style.css">
 	<link rel="stylesheet" type="text/css" href="../static/css/common.css">
 	<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+	<style type="text/css">
+		button	{
+			float: right;
+		}
+	</style>
 </head>
 <body>
 	{% include 'header.html' %}
@@ -29,9 +34,8 @@
 							<h5 class="mb-1">Aarti Calender</h5>
 							<form method="POST">
 								<hide><input type="hidden" name="filename" value="aarti"></hide>
-								<button>Download</button>
+								<button class="btn btn-danger">Download</button>
 							</form>
-							<small><span id="size">10</span>MB &middot; <span id="days">10</span> days ago</small>
 						</div>
 					</a>
 					<a href="#" class="list-group-item list-group-item-action align-items-start">
@@ -39,9 +43,8 @@
 							<h5 class="mb-1">Bhajan Book</h5>
 							<form method="POST">
 								<hide><input type="hidden" name="filename" value="bbook"></hide>
-								<button>Download</button>
+								<button class="btn btn-danger">Download</button>
 							</form>
-							<small><span id="size">10</span>MB &middot; <span id="days">10</span> days ago</small>
 						</div>
 					</a>
 					<a href="#" class="list-group-item list-group-item-action align-items-start">
@@ -49,9 +52,8 @@
 							<h5 class="mb-1">Bhajan 388</h5>
 							<form method="POST">
 								<hide><input type="hidden" name="filename" value="b388"></hide>
-								<button>Download</button>
+								<button class="btn btn-danger">Download</button>
 							</form>
-							<small><span id="size">10</span>MB &middot; <span id="days">10</span> days ago</small>
 						</div>
 					</a>
 					<a href="#" class="list-group-item list-group-item-action align-items-start">
@@ -59,9 +61,8 @@
 							<h5 class="mb-1">Shivji Bhajan</h5>
 							<form method="POST">
 								<hide><input type="hidden" name="filename" value="shiv"></hide>
-								<button>Download</button>
+								<button class="btn btn-danger">Download</button>
 							</form>
-							<small><span id="size">10</span>MB &middot; <span id="days">10</span> days ago</small>
 						</div>
 					</a>
 				</div>
