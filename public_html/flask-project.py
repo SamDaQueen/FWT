@@ -48,10 +48,22 @@ def shyambaba():
 def dharamshala():
        return render_template('sssm-dharamshala.html')
 
-@app.route('/sssm-downloads')
+@app.route('/sssm-downloads',methods = ['POST','GET'])
 def downloads():
-    
-    return render_template('sssm-downloads.html')
+    if request.method=='POST':
+    	name = request.form['filename']
+    	if name=='aarti':
+    		return send_file('static/bhajans/aarti.pdf')
+    	if name=='bbook':
+    		return send_file('static/bhajans/bhajanbook.pdf')
+    	if name=='b388':
+    		return send_file('static/bhajans/bhajan388.pdf')
+    	if name=='shiv':
+    		return send_file('static/bhajans/shiv.zip', as_attachment=True, attachment_filename='Bhajan_lal_gulab.zip')
+    elif(request.method=='GET'):
+    	return render_template('sssm-downloads.html')
+
+
 
 @app.route('/sssm-calender')
 def calendar():
