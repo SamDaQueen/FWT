@@ -18,7 +18,7 @@ def home():
     print(image_names)
     return render_template('sssm-home.html',image_names=image_names)
     
-    return render_template('sssm-home.html')
+
 
 @app.route('/sssm-gallery')
 def gallery():
@@ -38,6 +38,11 @@ def commitee():
 def developers():
     
     return render_template('sssm-developers.html')
+
+@app.route('/sssm-shyambaba')
+def shyambaba():
+    
+    return render_template('sssm-shyambaba.html')
 
 @app.route('/sssm-dharamshala')
 def dharamshala():
