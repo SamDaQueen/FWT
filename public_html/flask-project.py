@@ -1,7 +1,10 @@
 import database_handler
 import datetime
+
 import email_handler
-from flask import Flask, render_template, send_from_directory, json, request, jsonify,request,abort 
+
+from flask import Flask, render_template, send_from_directory, json, request, jsonify, send_file, request,abort 
+
 import os
 import threading
 
@@ -14,13 +17,20 @@ def base():
 
 @app.route('/sssm-home')
 def home():
+    print("entering loop")
+    image_names=os.listdir('./static/images/gallery/home')
+    print("2")
+    print(image_names)
+    return render_template('sssm-home.html',image_names=image_names)
     
-    return render_template('sssm-home.html')
-
 @app.route('/sssm-gallery')
 def gallery():
     
-    return render_template('sssm-gallery.html')
+    print("entering loop")
+    image_names=os.listdir('./static/images/gallery')
+    print("2")
+    print(image_names)
+    return render_template('sssm-gallery.html',image_names=image_names)
 
 @app.route('/sssm-committee')
 def commitee():
@@ -32,15 +42,31 @@ def developers():
     
     return render_template('sssm-developers.html')
 
+@app.route('/sssm-shyambaba')
+def shyambaba():
+    
+    return render_template('sssm-shyambaba.html')
+
 @app.route('/sssm-dharamshala')
 def dharamshala():
-    
-    return render_template('sssm-dharamshala.html')
+       return render_template('sssm-dharamshala.html')
 
-@app.route('/sssm-downloads')
+@app.route('/sssm-downloads',methods = ['POST','GET'])
 def downloads():
-    
-    return render_template('sssm-downloads.html')
+    if request.method=='POST':
+    	name = request.form['filename']
+    	if name=='aarti':
+    		return send_file('static/bhajans/aarti.pdf')
+    	if name=='bbook':
+    		return send_file('static/bhajans/bhajanbook.pdf')
+    	if name=='b388':
+    		return send_file('static/bhajans/bhajan388.pdf')
+    	if name=='shiv':
+    		return send_file('static/bhajans/shiv.zip', as_attachment=True, attachment_filename='Bhajan_lal_gulab.zip')
+    elif(request.method=='GET'):
+    	return render_template('sssm-downloads.html')
+
+
 
 @app.route('/sssm-calender')
 def calendar():
@@ -56,6 +82,11 @@ def login():
 def mandal():
     
     return render_template('sssm-mandal.html')
+
+@app.route('/sssm-404')
+def error():
+    
+    return render_template('sssm-404.html')
 
 @app.route('/sssm-membership',methods = ['POST','GET'])
 def membership():
@@ -94,6 +125,7 @@ def membership():
             member['fm5-birth-date']= request.form['fm5-birth-date']
 
             member['date_time'] = datetime.datetime.now().strftime("%d %B %Y at %X")
+
 
             t1 = threading.Thread(target=database_handler.Member, args=(member,)) 
             t2 = threading.Thread(target=email_handler.send_member_mail, args=(member,)) 
@@ -173,8 +205,10 @@ def supportus():
 
 @app.route('/sssm-trustees')
 def trustees():
-    
     return render_template('sssm-trustees.html')
+
+
+
 
 @app.route('/favicon.ico')
 def favicon():
@@ -188,4 +222,7 @@ def renderblog():
     return jsonify(data);
 
 if __name__ == "__main__":
-    app.run(debug=True)
+     app.run(debug=True)
+
+
+

@@ -4,6 +4,94 @@
 		"selected_items":
 		[
 			[
+				"text",
+				"text-align\tproperty"
+			],
+			[
+				"fo",
+				"font-size\tproperty"
+			],
+			[
+				"st",
+				"style\tTag"
+			],
+			[
+				"inf",
+				"info_textarea"
+			],
+			[
+				"ind",
+				"index"
+			],
+			[
+				"ema",
+				"email_comboBox"
+			],
+			[
+				"em",
+				"email_Input"
+			],
+			[
+				"sele",
+				"selectEmail"
+			],
+			[
+				"add",
+				"addItems"
+			],
+			[
+				"EM",
+				"EMAIL"
+			],
+			[
+				"emai",
+				"emails"
+			],
+			[
+				"email",
+				"email_Input"
+			],
+			[
+				"con",
+				"conn"
+			],
+			[
+				"co",
+				"conn"
+			],
+			[
+				"se",
+				"self"
+			],
+			[
+				"cli",
+				"checkBox_clip_ad"
+			],
+			[
+				"in",
+				"info_comboBox"
+			],
+			[
+				"info",
+				"info_comboBox"
+			],
+			[
+				"_",
+				"_translate"
+			],
+			[
+				"Qt",
+				"QtWidgets"
+			],
+			[
+				"if",
+				"if\tIf Condition"
+			],
+			[
+				"next",
+				"nextYear"
+			],
+			[
 				"max",
 				"maxlength\tAttr"
 			],
@@ -30,10 +118,6 @@
 			[
 				"re",
 				"required\tAttr"
-			],
-			[
-				"co",
-				"cover\tbackground-size"
 			],
 			[
 				"ba",
@@ -68,10 +152,6 @@
 				"width\tproperty"
 			],
 			[
-				"in",
-				"input\tTag"
-			],
-			[
 				"sc",
 				"scope"
 			],
@@ -86,10 +166,6 @@
 			[
 				"f",
 				"for\tfor"
-			],
-			[
-				"next",
-				"nextLine"
 			],
 			[
 				"n",
@@ -135,16 +211,8 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "/N/Sem VI/Python/Artificial Conversational Entity/ace.py",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Windows"
-			}
-		}
 	],
-	"build_system": "",
+	"build_system": "Packages/Python/Python.sublime-build",
 	"build_system_choices":
 	[
 		[
@@ -162,6 +230,22 @@
 				"Packages/C++/C++ Single File.sublime-build",
 				""
 			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
 		]
 	],
 	"build_varint": "",
@@ -173,7 +257,7 @@
 		[
 			[
 				"Package Control: ",
-				"Package Control: List Packages"
+				"Package Control: Discover Packages"
 			],
 			[
 				"git co",
@@ -240,43 +324,99 @@
 	},
 	"expanded_folders":
 	[
-		"/N/Sem VI/FWT/FWT_Miniproject"
+		"/N/Sem VI/FWT/FWT_Miniproject",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/static",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/colorlib-error-404-16",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/colorlib-error-404-16/colorlib-error-404-16"
 	],
 	"file_history":
 	[
-		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/sssm-mandal.html",
-		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/sssm-committee.html",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/flask-project.py",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/sssm-404.html",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/colorlib-error-404-16/colorlib-error-404-16/readme.txt",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/header.html",
+		"/N/Sem VI/IP/camera-test.py",
+		"/C/Users/samre/Desktop/dialog.py",
+		"/C/Users/samre/Desktop/app.py",
+		"/N/Sem VI/Python/Sem 6 Python Project/mal_ui.py",
+		"/N/Sem VI/Python/Sem 6 Python Project/start.py",
+		"/N/Sem VI/Python/Sem 6 Python Project/malicious-ui.py",
+		"/N/Sem VI/Python/Sem 6 Python Project/samply.py",
+		"/N/Sem VI/internshala_answers",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/membership-form.html",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/success.html",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/failure.html",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/query-form.html",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/database_handler.py",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/email_handler.py",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/booking-form.html",
+		"/C/Users/samre/Desktop/myqt.py",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/sssm-dharamshala.html",
 		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/sssm-home.html",
+		"/C/Users/samre/Desktop/Untitled.ipynb",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/sssm-query.html",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/static/js.py",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/static/data.json",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/sssm-calender.html",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/static/css/gilroy-bold-cufonfonts-webfont.zip",
 		"/N/Sem VI/FWT/FWT_Miniproject/public_html/static/css/profile_style.css",
-		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/sssm-trustees.html",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/static/css/supportus_style.css",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/static/css/form_style.css",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/sssm-supportus.html",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/sssm-downloads.html",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/sssm-gallery.html",
 		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/sssm-roombooking.html",
 		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/sssm-membership.html",
-		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/sssm-query.html",
-		"/N/Sem VI/FWT/FWT_Miniproject/public_html/static/css/form_style.css",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/sssm-mandal.html",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/sssm-developers.html",
+		"/C/xampp/tomcat/webapps/examples/WEB-INF/web.xml",
+		"/C/xampp/tomcat/webapps/FWT/WEB-INF/web.xml",
+		"/C/xampp/tomcat/FWT/WEB-INF/web.xml",
+		"/C/xampp/tomcat/FWT/home.html",
+		"/C/xampp/tomcat/FWT/WEB-INF/classes/App.java",
+		"/C/xampp/htdocs/FWT/form.html",
+		"/C/xampp/htdocs/FWT/reg.php",
+		"/C/xampp/htdocs/FWT/validate.php",
+		"/C/xampp/htdocs/FWT/formVal.html",
+		"/N/Sem VI/FWT/Angular/shopping_cart.html",
+		"/N/Sem VI/FWT/Angular/shopping_cart2.html",
+		"/N/Sem VI/FWT/fwtphpandcalculator/calculator.html",
+		"/N/Sem VI/FWT/Angular/calculator.html",
+		"/N/Sem VI/FWT/formValidation.html",
+		"/N/Sem VI/FWT/Experiment 5/Subjects_html.html",
+		"/N/Sem VI/FWT/Experiment 5/subjects.js",
+		"/N/Sem VI/FWT/factorial.html",
+		"/N/Sem VI/FWT/javaprac.html",
+		"/N/Sem VI/FWT/javaprac_form.html",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/footer.html",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/sssm-trustees.html",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/sssm-login.html",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/sssm-committee.html",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/Resources",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/static/css/calender_style.css",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/static/fullcalendar/fullcalendar.js",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/static/fullcalendar/demos/themes.html",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/static/fullcalendar/demos/json.html",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/calender-dates.json",
+		"/N/Sem VI/FWT/FWT_Miniproject/public_html/static/js/calender_javascript.js",
 		"/N/Sem VI/FWT/FWT_Miniproject/public_html/static/css/query_style.css",
 		"/N/Sem VI/FWT/FWT_Miniproject/public_html/static/css/gallery_style.css",
 		"/N/Sem VI/FWT/FWT_Miniproject/public_html/static/css/common.css",
-		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/sssm-login.html",
-		"/N/Sem VI/FWT/Angular/shopping_cart2.html",
-		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/sssm-gallery.html",
 		"/N/Sem VI/FWT/FWT_Miniproject/public_html/static/css/home_style.css",
 		"/N/Sem VI/FWT/FWT_Miniproject/public_html/static/css/login_style.css",
 		"/N/Sem VI/FWT/FWT_Miniproject/public_html/static/css/gilroy-bold-cufonfonts-webfont/style.css",
 		"/N/Sem VI/FWT/Zozor/rep_style.css",
 		"/N/Sem VI/FWT/bootstrap.html",
-		"/N/Sem VI/FWT/FWT_Miniproject/public_html/flask-project.py",
 		"/N/Sem VI/Python/Artificial Conversational Entity/ace.py",
 		"/N/Sem VI/FWT/FWT_Miniproject/public_html/css/login_style.css",
 		"/N/Sem VI/FWT/FWT_Miniproject/public_html/css/home_style.css",
 		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/home.html",
 		"/N/Sem VI/FWT/FWT_Miniproject/public_html/templates/Carousel Template · Bootstrap.html",
-		"/N/Sem VI/FWT/Angular/calculator.html",
-		"/N/Sem VI/FWT/Experiment 5/Subjects_html.html",
-		"/N/Sem VI/FWT/Angular/shopping_cart.html",
 		"/C/Users/samre/Documents/Jupyter/Multiple Regression/Position_Salary.ipynb",
 		"/N/MTA/PUBG/PUBG/gabriel.py",
 		"/C/Users/samre/Documents/Jupyter/pubg_spyder.py",
-		"/N/Sem VI/FWT/Experiment 5/subjects.js",
 		"/N/Sem VI/FWT/Zozor/replica.html",
 		"/N/Sem VI/FWT/Experiment 1/form.html",
 		"/N/Sem VI/FWT/Experiment 2/home.html",
@@ -320,18 +460,20 @@
 		"/C/Users/samre/Documents/Retail.java",
 		"/C/Users/samre/Documents/Customer.java",
 		"/N/Data Structures/2/Sort.cpp",
-		"/C/Users/samre/Documents/Hello.java",
-		"/N/Programming Lab/Hello.java"
+		"/C/Users/samre/Documents/Hello.java"
 	],
 	"find":
 	{
-		"height": 40.0
+		"height": 27.0
 	},
 	"find_in_files":
 	{
 		"height": 126.0,
 		"where_history":
 		[
+			"N:\\Sem VI\\FWT\\FWT_Miniproject",
+			"N:\\Sem VI\\FWT\\FWT_Miniproject\\public_html",
+			"N:\\Sem VI\\FWT\\FWT_Miniproject"
 		]
 	},
 	"find_state":
@@ -339,6 +481,33 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"selectionchange",
+			"selected",
+			"_translate(\"Dialog\", ",
+			"MainWindow",
+			"-d",
+			"-b",
+			"-r",
+			"-n",
+			",",
+			"favicon",
+			"gallery_style",
+			"gallery-css",
+			"gallery_css",
+			"3",
+			"btn-outline-primary",
+			"Gyaaras",
+			"btn",
+			"month",
+			"fc-toolbar",
+			"fc-month",
+			"fc-toolbar",
+			"div id=\"calender\"",
+			"fc-month-button btn btn-primary active",
+			"setTheme",
+			"themeSystem",
+			"I am a",
+			"teapot",
 			"Query",
 			"5",
 			"zip",
@@ -354,6 +523,15 @@
 		"regex": false,
 		"replace_history":
 		[
+			"selectOption",
+			"",
+			"Dialog",
+			"_d",
+			"_b",
+			"_r",
+			"_n",
+			"btn-outline-danger",
+			"Event",
 			"Membership",
 			"mobile",
 			"office",
@@ -371,37 +549,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/N/Sem VI/Python/Artificial Conversational Entity/ace.py",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -438,7 +587,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 178.0
+		"height": 192.0
 	},
 	"output.find_results":
 	{
@@ -460,7 +609,7 @@
 	"project": "sssm.sublime-project",
 	"replace":
 	{
-		"height": 70.0
+		"height": 50.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -498,7 +647,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 279.0,
+	"side_bar_width": 302.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

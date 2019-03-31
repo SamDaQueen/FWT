@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>SSSM-Shyam Baba</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../static/css/profile_style.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/common.css">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+	<link href="fonts.googleapis.com/css?family=Hind"  rel="stylesheet">
+	<script>
+
+		$(document).ready(function(){
+			$('#eng').hide();
+			$("#trans").click(function(){
+				$("#hin").toggle();
+				$("#eng").toggle();
+			});
+		});
+	</script>
+	
+</head>
+<body>
+	{% include 'header.html' %}
+
+	<main>
+		<section class="jumbotron text-center">
+			<div class="container">
+				<h1 class="jumbotron-heading">Shyam Baba</h1>
+				<p class="lead text-muted">...</p>
+			</div>
+		</section>
+
+		<div class="py-5 bg-light">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 my-2">
+						<button id="trans" class="btn btn-sm btn-danger">Toggle - Hindi/English</button>
+					</div>
+					<div class="col-md-8" id="hin" style="text-align: justify;">
+
+						{% include 'content/shyambabahin.html' %}
+						
+					</div>
+					<div class="col-md-8" id="eng" style="text-align: justify;">
+
+						{% include 'content/shyambabaeng.html' %}
+						
+					</div>
+					<div class="col-md-4">
+						<img class="bd-placeholder-img" width="100%" src="../static/images/khatu.jpg">
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	{% include 'footer.html' %}
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

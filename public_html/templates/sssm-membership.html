@@ -8,6 +8,121 @@
 	<link rel="stylesheet" type="text/css" href="../static/css/form_style.css">
 	<link rel="stylesheet" type="text/css" href="../static/css/common.css">
 	<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+
+	<script type="text/javascript">
+		function formValidate(){
+			
+	let fname = String(document.memForm.firstName.value);
+	let lname = String(document.memForm.lastName.value);
+	let mob = Number(document.memForm.mobile.value);
+	let off = Number(document.memForm.office.value);
+	let ll = Number(document.memForm.landline.value);
+	var today=new Date();
+
+	let fm1n=String(document.memForm.fm1_name.value);
+	let fm1r=String(document.memForm.fm1_relation.value);
+	let fm1bd=Date(document.memForm.fm1_birth_date.value);
+	alert(fm1n)
+	alert(fm1r)
+	alert(fm1bd)
+
+	let fm2n=String(document.memForm.fm2_name.value);
+	let fm2r=String(document.memForm.fm2_relation.value);
+	let fm2bd=Date(document.memForm.fm2_birth_date.value);
+
+	let fm3n=String(document.memForm.fm3_name.value);
+	let fm3r=String(document.memForm.fm3_relation.value);
+	let fm3bd=Date(document.memForm.fm3_birth_date.value);
+
+	let fm4n=String(document.memForm.fm4_name.value);
+	let fm4r=String(document.memForm.fm4_relation.value);
+	let fm4bd=Date(document.memForm.fm4_birth_date.value);
+
+	let fm5n=String(document.memForm.fm5_name.value);
+	let fm5r=String(document.memForm.fm5_relation.value);
+	let fm5bd=Date(document.memForm.fm5_birth_date.value);
+
+	if(off<70000000000 && off>10000000000)
+		alert("Enter correct 10 digit office number.");
+	if(ll<70000000000 && ll>10000000000)
+		alert("Enter correct 10 digit landline number.");
+	if(mob<70000000000 && mob>10000000000)
+		alert("Enter correct 10 digit mobile number.");
+	if(/\d/.test(fname))
+		alert("firstName contains number");
+	if(/\d/.test(lname))
+		alert("lastName contains number");
+	alert("asdf");
+
+	if(fm1n !="" || fm1r !="" ){
+		if(fm1n=="")
+			alert("Enter name of member 1");
+		if(fm1r=="")
+			alert("Enter relation of member 1");
+		if(fm1bd=="")
+			alert("Enter birthdate of member 1");
+		if(fm1bd>today)
+			alert("Enter correct date");
+	}
+
+	if(fm1n !="" || fm1r !="" ){
+		if(fm1n=="")
+			alert("Enter name of member 1");
+		if(fm1r=="")
+			alert("Enter relation of member 1");
+		if(fm1bd=="")
+			alert("Enter birthdate of member 1");
+		if(fm1bd>today)
+			alert("Enter correct date");
+	}
+
+	if(fm2n !="" || fm2r !=""){
+		if(fm2n=="")
+			alert("Enter name of member 2");
+		if(fm2r=="")
+			alert("Enter relation of member 2");
+		if(fm2bd=="")
+			alert("Enter birthdate of member 2");
+		if(fm2bd>today)
+			alert("Enter correct date");
+	}
+
+	if(fm3n !="" || fm3r !=""){
+		if(fm3n=="")
+			alert("Enter name of member 3");
+		if(fm3r=="")
+			alert("Enter relation of member 3");
+		if(fm3bd=="")
+			alert("Enter birthdate of member 3");
+		if(fm3bd>today)
+			alert("Enter correct date");
+	}
+
+	if(fm4n !="" || fm4r !=""){
+		if(fm4n=="")
+			alert("Enter name of member 4");
+		if(fm4r=="")
+			alert("Enter relation of member 4");
+		if(fm4bd=="")
+			alert("Enter birthdate of member 4");
+		if(fm4bd>today)
+			alert("Enter correct date");
+	}
+
+	if(fm5n !="" || fm5r !=""){
+		if(fm5n=="")
+			alert("Enter name of member 5");
+		if(fm5r=="")
+			alert("Enter relation of member 5");
+		if(fm5bd=="")
+			alert("Enter birthdate of member 5");
+		if(fm5bd>today)
+			alert("Enter correct date");
+	}
+
+
+}
+	</script>
 </head>
 <body>
 	{% include 'header.html' %}
