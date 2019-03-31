@@ -221,6 +221,11 @@ def renderblog():
         data = json.load(blog_file)
     return jsonify(data);
 
+@app.errorhandler(404) 
+def not_found(e): 
+
+    return render_template("sssm-404.html") 
+
 if __name__ == "__main__":
      app.run(debug=True)
 
