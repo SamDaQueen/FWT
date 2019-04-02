@@ -1,10 +1,7 @@
 import database_handler
 import datetime
-
 import email_handler
-
-from flask import Flask, render_template, send_from_directory, json, request, jsonify, send_file, request,abort 
-
+from flask import Flask, render_template, send_from_directory, json, request, jsonify, send_file, request, abort 
 import os
 import threading
 
