@@ -117,11 +117,11 @@ def membership():
 
             member['fm3_name']= request.form['fm3_name']
             member['fm3_relation']= request.form['fm3_relation']
-            member['fm3_birth-date']= request.form['fm3_birth_date']
+            member['fm3_birth_date']= request.form['fm3_birth_date']
 
             member['fm4_name']= request.form['fm4_name']
             member['fm4_relation']= request.form['fm4_relation']
-            member['fm4_birth-date']= request.form['fm4_birth_date']
+            member['fm4_birth_date']= request.form['fm4_birth_date']
 
             member['fm5_name']= request.form['fm5_name']
             member['fm5_relation']= request.form['fm5_relation']

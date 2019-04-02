@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="../static/css/profile_style.css">
 	<link rel="stylesheet" type="text/css" href="../static/css/common.css">
 	<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+	<link href="fonts.googleapis.com/css?family=Hind"  rel="stylesheet">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script >
@@ -34,6 +35,7 @@ $(this).attr("width","100%");
 			<div class="container">
 				<h1 class="jumbotron-heading">Gallery</h1>
 				<p class="lead text-muted">Here you can find images of our Mandal and its events.</p>
+				<p class="lead text-muted">मंडल के कार्यक्रमों के चित्र देखिये|</p>
 			</div>
 		</section>
 		
@@ -48,10 +50,10 @@ $(this).attr("width","100%");
 					
 						<div class="col-md-4">
 							<div class="card mb-4 shadow-sm">
-								<img class="bd-placeholder-img card-img-top" width="100%" height="225" src="static/images/gallery/{{image_name}}" alt="Random Image">
+								<img class="bd-placeholder-img card-img-top" width="100%" height="225" src="static/images/gallery/{{image_name}}" alt="{{image_name}}">
 								<div class="card-body">
 									
-									<small class="text-muted">16/03/2019</small>
+									<small class="text-muted">{{image_name}}</small>
 								</div>
 							</div>
 						</div>
