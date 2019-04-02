@@ -1,7 +1,10 @@
 import database_handler
 import datetime
+
 import email_handler
-from flask import Flask, render_template, send_from_directory, json, request, jsonify, send_file, request, abort 
+
+from flask import Flask, render_template, send_from_directory, json, request, jsonify, send_file, request,abort 
+
 import os
 import threading
 
@@ -18,7 +21,7 @@ def base():
 @app.route('/sssm-home')
 def home():
     print("entering loop")
-    image_names=os.listdir('./static/images/gallery/home')
+    image_names=os.listdir('./static/images/home')
     print("2")
     print(image_names)
     return render_template('sssm-home.html',image_names=image_names)
@@ -97,32 +100,32 @@ def membership():
         try:
 
             member = { 'first_name':request.form['firstName'],'last_name':request.form['lastName'],
-            'email':request.form['email'],'birth_date':request.form['birth-date'],
+            'email':request.form['email'],'birth_date':request.form['birth_date'],
             'address':request.form['address'],'occupation':request.form['occupation'],
             'mobile':request.form['mobile']}
             
             member['landline']= request.form['landline']
             member['office']= request.form['office']
 
-            member['fm1-name']= request.form['fm1-name']
-            member['fm1-relation']= request.form['fm1-relation']
-            member['fm1-birth-date']= request.form['fm1-birth-date']
+            member['fm1_name']= request.form['fm1_name']
+            member['fm1_relation']= request.form['fm1_relation']
+            member['fm1_birth_date']= request.form['fm1_birth_date']
 
-            member['fm2-name']= request.form['fm2-name']
-            member['fm2-relation']= request.form['fm2-relation']
-            member['fm2-birth-date']= request.form['fm2-birth-date']
+            member['fm2_name']= request.form['fm2_name']
+            member['fm2_relation']= request.form['fm2_relation']
+            member['fm2_birth_date']= request.form['fm2_birth_date']
 
-            member['fm3-name']= request.form['fm3-name']
-            member['fm3-relation']= request.form['fm3-relation']
-            member['fm3-birth-date']= request.form['fm3-birth-date']
+            member['fm3_name']= request.form['fm3_name']
+            member['fm3_relation']= request.form['fm3_relation']
+            member['fm3_birth-date']= request.form['fm3_birth_date']
 
-            member['fm4-name']= request.form['fm4-name']
-            member['fm4-relation']= request.form['fm4-relation']
-            member['fm4-birth-date']= request.form['fm4-birth-date']
+            member['fm4_name']= request.form['fm4_name']
+            member['fm4_relation']= request.form['fm4_relation']
+            member['fm4_birth-date']= request.form['fm4_birth_date']
 
-            member['fm5-name']= request.form['fm5-name']
-            member['fm5-relation']= request.form['fm5-relation']
-            member['fm5-birth-date']= request.form['fm5-birth-date']
+            member['fm5_name']= request.form['fm5_name']
+            member['fm5_relation']= request.form['fm5_relation']
+            member['fm5_birth_date']= request.form['fm5_birth_date']
 
             member['date_time'] = datetime.datetime.now().strftime("%d %B %Y at %X")
 
@@ -179,8 +182,8 @@ def roombooking():
         try:
             booking = { 'first_name':request.form['firstName'],'last_name':request.form['lastName'],
             'email':request.form['email'],'mobile':request.form['mobile'],'address':request.form['address'],
-            'check-in-date':request.form['check-in-date'],'check-in-time-hour':request.form['check-in-time-hour'],
-            'check-in-time-minute':request.form['check-in-time-minute'],'check-out-date':request.form['check-out-date'],
+            'check-in-date':request.form['check_in_date'],'check-in-time-hour':request.form['check-in-time-hour'],
+            'check-in-time-minute':request.form['check-in-time-minute'],'check-out-date':request.form['check_out_date'],
             'check-out-time-hour':request.form['check-out-time-hour'],'check-out-time-minute':request.form['check-out-time-minute'],
             'no-of-people':request.form['people'],'room-type':request.form['room-type']}
 

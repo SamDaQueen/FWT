@@ -24,13 +24,13 @@
 				<!--The .active class needs to be added to one of the slides otherwise the carousel will not be visible-->
 				<div class="carousel-item active">
 					<div class="mx-0">
-						<img class="d-block w-100" src="../static/images/A.jpg" alt="First slide">
+						<img class="d-block w-100" src="../static/images/gallery/IMG_20190311_173707.jpg" alt="First slide">
 						<div class="carousel-caption text-left">
 							<div class="inner-banner">
 								<h1>Dharamshala</h1>
 								{% include 'content/home.html' %}
 							</div>
-							<button class="btn btn-danger">Contact us</button>
+							<a href="sssm-roombooking"><button class="btn btn-danger">Request Room</button></a>
 						</div>
 					</div>
 				</div>
@@ -43,7 +43,7 @@
 								{% include 'content/home.html' %}
 							</div>
 							<form action="sssm-calender">
-								<button class="btn btn-danger">See all events</button>
+								<a href="sssm-calender"><button class="btn btn-danger">See all events</button></a>
 							</form>
 						</div>
 					</div>
@@ -66,7 +66,7 @@
 								{% endfor %}
 
 							</div>
-							<button class="btn btn-danger">Explore</button>
+							<a href="sssm-gallery"><button class="btn btn-danger">Explore</button></a>
 						</div>
 					</div>
 				</div>

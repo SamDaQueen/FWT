@@ -8,6 +8,39 @@
 	<link rel="stylesheet" type="text/css" href="../static/css/form_style.css">
 	<link rel="stylesheet" type="text/css" href="../static/css/common.css">
 	<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+	<link href="fonts.googleapis.com/css?family=Hind"  rel="stylesheet">
+
+
+	<script type="text/javascript">
+		function formValidate(){
+			
+	let fname = String(document.rmbkForm.firstName.value);
+	let lname = String(document.rmbkForm.lastName.value);
+	let mob = Number(document.rmbkForm.mobile.value);
+	var today=new Date();
+
+	let chkin=Date(document.rmbkForm.check_in_date.value);
+	let chkout=Date(document.rmbkForm.check_out_date.value);
+
+	
+	if(mob<70000000000 || mob>10000000000)
+		alert("Enter correct 10 digit mobile number.");
+	if(/\d/.test(fname))
+		alert("firstName contains number");
+	if(/\d/.test(lname))
+		alert("lastName contains number");
+
+	if(chkin<today)
+			alert("Enter correct Checkin date");
+		if(chkout<chkin)
+			alert("Enter Correct Checkout Date")
+
+
+}
+	</script>
+
+
+
 </head>
 <body>
 	{% include 'header.html' %}
@@ -15,7 +48,7 @@
 	<main>
 		<section class="jumbotron text-center">
 			<div class="container form_body">
-				<h1 class="jumbotron-heading">Room Booking</h1>
+				<h1 class="jumbotron-heading">Room Request</h1>
 				<p class="lead text-muted">Fill this form and send it to us. We will reply back with availability of rooms.</p>
 				<p><b>*Rooms are subject to availablity</b></p>
 				<p><b>*No booking to be done during Phalgun Mela.</b></p>
