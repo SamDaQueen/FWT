@@ -2,26 +2,26 @@
 	<div class="container form_body">
 		<div class="row">
 			<div class="col-md-12">
-				<form method="POST">
+				<form method="POST" name="rmbkForm" onsubmit="formValidate()">
 					<div class="row">
 						<div class="col-md-6 mb-3">
 							<label for="firstName">First name</label>
-							<input type="text" class="form-control" name="firstName" value="Samreen" required autofocus>
+							<input type="text" class="form-control" name="firstName"  placeholder="First Name" required autofocus>
 						</div>
 						<div class="col-md-6 mb-3">
 							<label for="lastName">Last name</label>
-							<input type="text" class="form-control" name="lastName" value="Reyaz" required>
+							<input type="text" class="form-control" name="lastName"  placeholder="Last Name" required>
 						</div>
 					</div>
 
 					<div class="row">
 						<div class="col-md-6 mb-3">
 							<label for="email">Email</label>
-							<input type="text" class="form-control" value="example@gmail.com" name="email" required>
+							<input type="text" class="form-control"  placeholder="example@gmail.com" name="email" required>
 						</div>
 						<div class="col-md-6 mb-3">
 							<label for="mobile">Mobile</label>
-							<input type="number" class="form-control" name="mobile" value="9833207530" required minlength="10" min="0">
+							<input type="number" class="form-control" name="mobile"  placeholder="9833207530" required size="10" min="0">
 						</div>
 					</div>
 					<div class="mb-3">
@@ -32,52 +32,52 @@
 					<div class="row">
 						<div class="col-md-6 mb-3">
 							<label for="check-in-date">Check-in Date</label>
-							<input type="date" class="form-control" name="check-in-date" max="2020-12-31" min="2019-01-31" value="2019-03-25" required>
+							<input type="date" class="form-control" name="check_in_date"   placeholder="2019-03-25" required>
 						</div>
 						<div class="col-md-6 mb-3">
 							<label for="check-in-time-hour">Check-in Time</label>
 							<div class="input-group">
-								<input type="number" class="form-control" name="check-in-time-hour" required min="0" max="12" value="2">
+								<input type="number" class="form-control" name="check-in-time-hour" required min="0" max="12"  placeholder="2">
 								<span class="input-group-text">:</span>
-								<input type="number" class="form-control" name="check-in-time-minute" required min="0" max="60" maxlength="2" value="30">
+								<input type="number" class="form-control" name="check-in-time-minute" required min="0" max="60" maxlength="2"  placeholder="30">
 							</div>
 						</div>
 						<div class="col-md-6 mb-3">
 							<label for="check-out-date">Check-out Date</label>
-							<input type="date" class="form-control" name="check-out-date" max="2020-12-31" min="2019-01-31" value="2019-03-26" required>
+							<input type="date" class="form-control" name="check_out_date"   placeholder="2019-03-26" required>
 						</div>
 						<div class="col-md-6 mb-3">
 							<label for="check-out-time-hour">Check-out Time</label>
 							<div class="input-group">
-								<input type="number" class="form-control" name="check-out-time-hour" required min="0" max="12" value="3">
+								<input type="number" class="form-control" name="check-out-time-hour" required min="0" max="12"  placeholder="3">
 								<span class="input-group-text">:</span>
-								<input type="number" class="form-control" name="check-out-time-minute" required min="0" max="60" maxlength="2" value="30">
+								<input type="number" class="form-control" name="check-out-time-minute" required min="0" max="60" maxlength="2"  placeholder="30">
 							</div>
 						</div>
 					</div>
 					<div class="mb-3">
 						<label for="address">Number of people</label>
-						<input type="number" class="form-control" name="people" required min="1" max="20" maxlength="2" value="2" value="2">
+						<input type="number" class="form-control" name="people" required min="1" max="20" maxlength="2"  placeholder="2"  placeholder="2">
 					</div>
 					<hr class="mb-4">
 					<h4 class="mb-3">Type of Room</h4>
 
 					<div class="d-block my-3">
 						<div class="custom-control custom-radio">
-							<input id="ac-w-b-t" name="room-type" type="radio" class="custom-control-input" value="AC with Bathroom Toilet" checked required>
-							<label class="custom-control-label" for="ac-w-b-t">AC with Bathroom Toilet</label>
+							<input id="ac-w-b-t" name="room-type" type="radio" class="custom-control-input"  placeholder="AC with Bathroom Toilet" checked required>
+							<label class="custom-control-label" for="ac-w-b-t">AC with Bathroom Toilet &nbsp &nbsp &nbsp &nbsp &nbsp  Rs.2000 per night</label>
 						</div>
 						<div class="custom-control custom-radio">
-							<input id="nac-w-b-t" name="room-type" type="radio" class="custom-control-input" value="Non-AC with Bathroom Toilet" required>
-							<label class="custom-control-label" for="nac-w-b-t">Non-AC with Bathroom Toilet</label>
+							<input id="nac-w-b-t" name="room-type" type="radio" class="custom-control-input"  placeholder="Non-AC with Bathroom Toilet" required>
+							<label class="custom-control-label" for="nac-w-b-t">Non-AC with Bathroom Toilet &nbsp &nbsp &nbsp &nbsp &nbsp  Rs.1000 per night</label>
 						</div>
 						<div class="custom-control custom-radio">
-							<input id="nac-w-b" name="room-type" type="radio" class="custom-control-input" value="Non-AC with Bathroom without Toilet<" required>
-							<label class="custom-control-label" for="nac-w-b">Non-AC with Bathroom without Toilet</label>
+							<input id="nac-w-b" name="room-type" type="radio" class="custom-control-input"  placeholder="Non-AC with Bathroom without Toilet<" required>
+							<label class="custom-control-label" for="nac-w-b">Non-AC with Bathroom without Toilet &nbsp &nbsp &nbsp &nbsp &nbsp  Rs.750 per night</label>
 						</div>
 						<div class="custom-control custom-radio">
-							<input id="nac" name="room-type" type="radio" class="custom-control-input" value="Non-AC without Bathroom Toilet" required>
-							<label class="custom-control-label" for="nac">Non-AC without Bathroom Toilet</label>
+							<input id="nac" name="room-type" type="radio" class="custom-control-input"  placeholder="Non-AC without Bathroom Toilet" required>
+							<label class="custom-control-label" for="nac">Non-AC without Bathroom Toilet &nbsp &nbsp &nbsp &nbsp &nbsp Rs.500 per night</label>
 						</div>
 					</div>
 					<hr class="mb-4">

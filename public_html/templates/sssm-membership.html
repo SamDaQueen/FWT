@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="../static/css/form_style.css">
 	<link rel="stylesheet" type="text/css" href="../static/css/common.css">
 	<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+	<link href="fonts.googleapis.com/css?family=Hind"  rel="stylesheet">
 
 	<script type="text/javascript">
 		function formValidate(){
@@ -22,9 +23,6 @@
 	let fm1n=String(document.memForm.fm1_name.value);
 	let fm1r=String(document.memForm.fm1_relation.value);
 	let fm1bd=Date(document.memForm.fm1_birth_date.value);
-	alert(fm1n)
-	alert(fm1r)
-	alert(fm1bd)
 
 	let fm2n=String(document.memForm.fm2_name.value);
 	let fm2r=String(document.memForm.fm2_relation.value);
@@ -42,17 +40,18 @@
 	let fm5r=String(document.memForm.fm5_relation.value);
 	let fm5bd=Date(document.memForm.fm5_birth_date.value);
 
-	if(off<70000000000 && off>10000000000)
-		alert("Enter correct 10 digit office number.");
-	if(ll<70000000000 && ll>10000000000)
-		alert("Enter correct 10 digit landline number.");
-	if(mob<70000000000 && mob>10000000000)
+	if(off!=0)
+		if(off<1000000000 || off>10000000000)
+			alert("Enter correct 10 digit office number.");
+	if(ll!=0)
+		if(ll<1000000000 || ll>10000000000)
+			alert("Enter correct 10 digit landline number.");
+	if(mob<7000000000 || mob>10000000000)
 		alert("Enter correct 10 digit mobile number.");
 	if(/\d/.test(fname))
 		alert("firstName contains number");
 	if(/\d/.test(lname))
 		alert("lastName contains number");
-	alert("asdf");
 
 	if(fm1n !="" || fm1r !="" ){
 		if(fm1n=="")
