@@ -13,7 +13,7 @@ def login():
 
 def send_and_close(server,data):
 	server.sendmail("sssm.mum@gmail.com",
-	"gncis8@gmail.com", data)
+	"sssm.mum@gmail.com", data)
 
 	server.close()
 
@@ -24,7 +24,7 @@ def send_query_mail(query):
 	msg = MIMEMultipart("alternative")
 	msg['Subject'] = 'Query by '  + query['first_name']+" "+query['last_name']
 	msg['From'] = 'sssm.mum@gmail.com'
-	msg['To'] = "gncis8@gmail.com"
+	msg['To'] = "sssm.mum@gmail.com"
 
 	html_txt = """
 	<html>
@@ -54,7 +54,7 @@ def send_membership_mail(member):
 	msg = MIMEMultipart("alternative")
 	msg['Subject'] = 'New member request by '+ member['first_name']+" "+member['last_name']
 	msg['From'] = 'sssm.mum@gmail.com'
-	msg['To'] = "gncis8@gmail.com"
+	msg['To'] = "sssm.mum@gmail.com"
 
 	no_of_family=0
 
@@ -163,7 +163,7 @@ def send_booking_mail(booking):
 	msg = MIMEMultipart("alternative")
 	msg['Subject'] = 'Booking Request by '  + booking['first_name']+" "+booking['last_name']
 	msg['From'] = 'sssm.mum@gmail.com'
-	msg['To'] = "gncis8@gmail.com"
+	msg['To'] = "sssm.mum@gmail.com"
 
 	html_txt = """
 	<html>
