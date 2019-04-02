@@ -12,9 +12,9 @@ body {
 	font-weight: normal;
 	src: local('Gilroy-Regular ☞'), url('Gilroy-Regular.woff') format('woff');
 }
-@font-face {
-	font-family: 'Gilroy-Medium';
-	font-style: normal;
-	font-weight: normal;
-	src: local('Gilroy-Medium ☞'), url('Gilroy-Medium.woff') format('woff');
+@media (min-width: 320px) and (max-width: 767px) {
+	body	{
+		padding-top: 5rem;
+	}
 }
+
