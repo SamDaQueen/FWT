@@ -1,9 +1,17 @@
 import database_handler
 import datetime
-from flask import Flask, render_template, send_from_directory, json, request, jsonify, send_file, request,abort 
-import os
+
 import email_handler
+
+from flask import Flask, render_template, send_from_directory, json, request, jsonify, send_file, request,abort 
+
+import os
+import threading
+
 app = Flask(__name__)
+
+class WrongEntry(Exception):
+    pass
 
 @app.route('/')
 def base():
@@ -18,8 +26,6 @@ def home():
     print(image_names)
     return render_template('sssm-home.html',image_names=image_names)
     
-
-
 @app.route('/sssm-gallery')
 def gallery():
     
@@ -91,83 +97,116 @@ def membership():
     if request.method == "GET":
         return render_template('sssm-membership.html',form=1)
     elif request.method == "POST":
-        
-        member = { 'first_name':request.form['firstName'],'last_name':request.form['lastName'],
-        'email':request.form['email'],'birth_date':request.form['birth-date'],
-        'address':request.form['address'],'occupation':request.form['occupation'],
-        'mobile':request.form['mobile']}
+        try:
+
+            member = { 'first_name':request.form['firstName'],'last_name':request.form['lastName'],
+            'email':request.form['email'],'birth_date':request.form['birth-date'],
+            'address':request.form['address'],'occupation':request.form['occupation'],
+            'mobile':request.form['mobile']}
+            
+            member['landline']= request.form['landline']
+            member['office']= request.form['office']
+
+            member['fm1-name']= request.form['fm1-name']
+            member['fm1-relation']= request.form['fm1-relation']
+            member['fm1-birth-date']= request.form['fm1-birth-date']
+
+            member['fm2-name']= request.form['fm2-name']
+            member['fm2-relation']= request.form['fm2-relation']
+            member['fm2-birth-date']= request.form['fm2-birth-date']
+
+            member['fm3-name']= request.form['fm3-name']
+            member['fm3-relation']= request.form['fm3-relation']
+            member['fm3-birth-date']= request.form['fm3-birth-date']
+
+            member['fm4-name']= request.form['fm4-name']
+            member['fm4-relation']= request.form['fm4-relation']
+            member['fm4-birth-date']= request.form['fm4-birth-date']
+
+            member['fm5-name']= request.form['fm5-name']
+            member['fm5-relation']= request.form['fm5-relation']
+            member['fm5-birth-date']= request.form['fm5-birth-date']
+
+            member['date_time'] = datetime.datetime.now().strftime("%d %B %Y at %X")
 
 
-        
-        member['landline']= request.form['landline']
-        member['office']= request.form['office']
+            #t1 = threading.Thread(target=database_handler.Member, args=(member,)) 
+            #t2 = threading.Thread(target=email_handler.send_member_mail, args=(member,)) 
 
-        member['fm1_name']= request.form['fm1_name']
-        member['fm1_relation']= request.form['fm1_relation']
-        member['fm1_birth_date']= request.form['fm1_birth_date']
+            database_handler.Member(member)
+            email_handler.send_member_mail(member)
 
-        member['fm2_name']= request.form['fm2_name']
-        member['fm2_relation']= request.form['fm2_relation']
-        member['fm2_birth_date']= request.form['fm2_birth_date']
+        except WrongEntry:
+            return render_template('sssm-membership.html',form=1)
+        except Exception as e:
+            return render_template('sssm-membership.html',form=3)
 
-        member['fm3_name']= request.form['fm3_name']
-        member['fm3_relation']= request.form['fm3_relation']
-        member['fm3_birth_date']= request.form['fm3_birth_date']
-
-        member['fm4_name']= request.form['fm4_name']
-        member['fm4_relation']= request.form['fm4_relation']
-        member['fm4_birth_date']= request.form['fm4_birth_date']
-
-        member['fm5_name']= request.form['fm5_name']
-        member['fm5_relation']= request.form['fm5_relation']
-        member['fm5_birth_date']= request.form['fm5_birth_date']
-
-        member['date_time'] = datetime.datetime.now().strftime("%d %B %Y at %X")
-
-        database_handler.Member(member)
-        email_handler.send_membership_mail(member)
-
-        
-        return render_template('sssm-membership.html',form=2)
-    
-    
+        else:
+            return render_template('sssm-membership.html',form=2)
 
 @app.route('/sssm-query',methods = ['POST','GET'])
 def query_page():
     if request.method == "GET":
     	return render_template('sssm-query.html',form=1)
     elif request.method == "POST":
-        query = { 'first_name':request.form['firstName'],'last_name':request.form['lastName'],
-        'email':request.form['email'],'mobile':request.form['mobile'],'query':request.form['query']}
-        query['date_time'] = datetime.datetime.now().strftime("%d %B %Y at %X")
+        try:
+            query = { 'first_name':request.form['firstName'],'last_name':request.form['lastName'],
+            'email':request.form['email'],'mobile':request.form['mobile'],'query':request.form['query']}
+            query['date_time'] = datetime.datetime.now().strftime("%d %B %Y at %X")
 
-        database_handler.Query(query)
-        email_handler.send_query_mail(query)
+            #t1 = threading.Thread(target=database_handler.Query, args=(query,)) 
+            #t2 = threading.Thread(target=email_handler.send_query_mail, args=(query,)) 
 
+            #t1.start() 
+            #t2.start() 
         
-        return render_template('sssm-query.html',form=2)
+            #t1.join() 
+            #t2.join() 
 
+            database_handler.Query(query)
+            email_handler.send_query_mail(query)
 
+        except WrongEntry:
+            return render_template('sssm-query.html',form=1)
+        except Exception as e:
+            return render_template('sssm-query.html',form=3)
+        else:
+            return render_template('sssm-query.html',form=2)
 
 @app.route('/sssm-roombooking',methods = ['POST','GET'])
 def roombooking():
-    #incomplete
+
     if request.method == "GET":
         return render_template('sssm-roombooking.html',form=1)
     elif request.method == "POST":
-        booking = { 'first_name':request.form['firstName'],'last_name':request.form['lastName'],
-        'email':request.form['email'],'mobile':request.form['mobile'],'address':request.form['address'],
-        'check-in-date':request.form['check-in-date'],'check-in-time-hour':request.form['check-in-time-hour'],
-        'check-in-time-minute':request.form['check-in-time-minute'],'check-out-date':request.form['check-out-date'],
-        'check-out-time-hour':request.form['check-out-time-hour'],'check-out-time-minute':request.form['check-out-time-minute'],
-        'no-of-people':request.form['people'],'room-type':request.form['room-type']}
+        try:
+            booking = { 'first_name':request.form['firstName'],'last_name':request.form['lastName'],
+            'email':request.form['email'],'mobile':request.form['mobile'],'address':request.form['address'],
+            'check-in-date':request.form['check-in-date'],'check-in-time-hour':request.form['check-in-time-hour'],
+            'check-in-time-minute':request.form['check-in-time-minute'],'check-out-date':request.form['check-out-date'],
+            'check-out-time-hour':request.form['check-out-time-hour'],'check-out-time-minute':request.form['check-out-time-minute'],
+            'no-of-people':request.form['people'],'room-type':request.form['room-type']}
 
-        booking['date_time'] = datetime.datetime.now().strftime("%d %B %Y at %X")
+            booking['date_time'] = datetime.datetime.now().strftime("%d %B %Y at %X")
 
-        database_handler.Booking(booking)
-        email_handler.send_booking_mail(booking)
+            # t1 = threading.Thread(target=database_handler.Booking, args=(booking,)) 
+            # t2 = threading.Thread(target=email_handler.send_booking_mail, args=(booking,)) 
+            
+            # t1.start() 
+            # t2.start() 
+          
+            # t1.join() 
+            # t2.join() 
 
-        return render_template('sssm-roombooking.html',form=2)
+            database_handler.Booking(booking)
+            email_handler.send_booking_mail(booking)
+
+        except WrongEntry:
+            return render_template('sssm-roombooking.html',form=1)
+        except Exception as e:
+            return render_template('sssm-roombooking.html',form=3)
+        else:
+            return render_template('sssm-roombooking.html',form=2)
 
 @app.route('/sssm-supportus')
 def supportus():
@@ -177,9 +216,6 @@ def supportus():
 @app.route('/sssm-trustees')
 def trustees():
     return render_template('sssm-trustees.html')
-
-
-
 
 @app.route('/favicon.ico')
 def favicon():
@@ -191,6 +227,11 @@ def renderblog():
     with open(filename) as blog_file:
         data = json.load(blog_file)
     return jsonify(data);
+
+@app.errorhandler(404) 
+def not_found(e): 
+
+    return render_template("sssm-404.html") 
 
 if __name__ == "__main__":
      app.run(debug=True)
