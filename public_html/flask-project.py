@@ -10,6 +10,9 @@ import threading
 
 app = Flask(__name__)
 
+class WrongEntry(Exception):
+    pass
+
 @app.route('/')
 def base():
     
@@ -127,9 +130,14 @@ def membership():
             member['date_time'] = datetime.datetime.now().strftime("%d %B %Y at %X")
 
 
-            t1 = threading.Thread(target=database_handler.Member, args=(member,)) 
-            t2 = threading.Thread(target=email_handler.send_member_mail, args=(member,)) 
+            #t1 = threading.Thread(target=database_handler.Member, args=(member,)) 
+            #t2 = threading.Thread(target=email_handler.send_member_mail, args=(member,)) 
 
+            database_handler.Member(member)
+            email_handler.send_member_mail(member)
+
+        except WrongEntry:
+            return render_template('sssm-membership.html',form=1)
         except Exception as e:
             return render_template('sssm-membership.html',form=3)
 
@@ -146,19 +154,20 @@ def query_page():
             'email':request.form['email'],'mobile':request.form['mobile'],'query':request.form['query']}
             query['date_time'] = datetime.datetime.now().strftime("%d %B %Y at %X")
 
-            t1 = threading.Thread(target=database_handler.Query, args=(query,)) 
-            t2 = threading.Thread(target=email_handler.send_query_mail, args=(query,)) 
+            #t1 = threading.Thread(target=database_handler.Query, args=(query,)) 
+            #t2 = threading.Thread(target=email_handler.send_query_mail, args=(query,)) 
 
-            # starting thread 1 
-            t1.start() 
-            # starting thread 2 
-            t2.start() 
-          
-            # wait until thread 1 is completely executed 
-            t1.join() 
-            # wait until thread 2 is completely executed 
-            t2.join() 
+            #t1.start() 
+            #t2.start() 
+        
+            #t1.join() 
+            #t2.join() 
 
+            database_handler.Query(query)
+            email_handler.send_query_mail(query)
+
+        except WrongEntry:
+            return render_template('sssm-query.html',form=1)
         except Exception as e:
             return render_template('sssm-query.html',form=3)
         else:
@@ -180,19 +189,20 @@ def roombooking():
 
             booking['date_time'] = datetime.datetime.now().strftime("%d %B %Y at %X")
 
-            t1 = threading.Thread(target=database_handler.Booking, args=(booking,)) 
-            t2 = threading.Thread(target=email_handler.send_booking_mail, args=(booking,)) 
+            # t1 = threading.Thread(target=database_handler.Booking, args=(booking,)) 
+            # t2 = threading.Thread(target=email_handler.send_booking_mail, args=(booking,)) 
             
-            # starting thread 1 
-            t1.start() 
-            # starting thread 2 
-            t2.start() 
+            # t1.start() 
+            # t2.start() 
           
-            # wait until thread 1 is completely executed 
-            t1.join() 
-            # wait until thread 2 is completely executed 
-            t2.join() 
+            # t1.join() 
+            # t2.join() 
 
+            database_handler.Booking(booking)
+            email_handler.send_booking_mail(booking)
+
+        except WrongEntry:
+            return render_template('sssm-roombooking.html',form=1)
         except Exception as e:
             return render_template('sssm-roombooking.html',form=3)
         else:
@@ -206,9 +216,6 @@ def supportus():
 @app.route('/sssm-trustees')
 def trustees():
     return render_template('sssm-trustees.html')
-
-
-
 
 @app.route('/favicon.ico')
 def favicon():

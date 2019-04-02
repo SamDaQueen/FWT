@@ -47,7 +47,7 @@ def send_query_mail(query):
 
 	send_and_close(server,msg.as_string())
 
-def send_membership_mail(member):
+def send_member_mail(member):
 
 	server = login()
 
