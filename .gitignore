@@ -2,3 +2,4 @@
 sssm.sublime-workspace
 *.sublime-workspace
 *.db
+*.pyc
