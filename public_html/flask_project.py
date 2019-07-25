@@ -204,6 +204,7 @@ def roombooking():
         except WrongEntry:
             return render_template('sssm-roombooking.html',form=1)
         except Exception as e:
+            print(e)
             return render_template('sssm-roombooking.html',form=3)
         else:
             return render_template('sssm-roombooking.html',form=2)
@@ -235,6 +236,3 @@ def not_found(e):
 
 if __name__ == "__main__":
      app.run(debug=True)
-
-
-
