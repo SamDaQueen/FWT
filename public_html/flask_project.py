@@ -3,12 +3,13 @@ import datetime
 
 import email_handler
 
-from flask import Flask, render_template, send_from_directory, json, request, jsonify, send_file, request,abort 
+from flask import Flask, render_template, send_from_directory, json, request, jsonify, send_file, session, request,abort 
 
 import os
 import threading
 
 app = Flask(__name__)
+app.secret_key = "gabriel"
 
 class WrongEntry(Exception):
     pass
@@ -24,6 +25,7 @@ def home():
     image_names=os.listdir('./static/images/home')
     print("2")
     print(image_names)
+    session['logged_in'] = False
     return render_template('sssm-home.html',image_names=image_names)
     
 @app.route('/sssm-gallery')
@@ -69,17 +71,26 @@ def downloads():
     elif(request.method=='GET'):
     	return render_template('sssm-downloads.html')
 
-
-
 @app.route('/sssm-calender')
 def calendar():
    
     return render_template('sssm-calender.html')
 
-@app.route('/sssm-login')
+@app.route('/sssm-login',methods = ['POST','GET'])
 def login():
-    
-    return render_template('sssm-login.html')
+
+    if request.method == "GET":
+        if 'logged_in' in session:
+            return "Logged in"
+        return render_template('sssm-login.html')
+    elif request.method == "POST":
+        if 'logged_in' in session:
+            return "Logged in"
+        if request.form['email_id'] == "hello@hello.com" and request.form['password'] == "there":
+            return "this works"
+            session['logged_in'] = True
+        else:
+            return "this is wrong"
 
 @app.route('/sssm-mandal')
 def mandal():
@@ -235,4 +246,4 @@ def not_found(e):
     return render_template("sssm-404.html") 
 
 if __name__ == "__main__":
-     app.run(debug=True)
+    app.run(debug=True,port=1234)

@@ -27,6 +27,8 @@ def Query(query):
 		query['last_name'],query['email'],query['mobile'],query['query']))
 	con.commit()
 
+	con.close()
+
 def Member(member):
 
 	con, cur = opendb()
@@ -51,6 +53,8 @@ def Member(member):
 		member['fm5_birth_date']))
 	con.commit()	
 
+	con.close()
+
 def Booking(booking):
 
 	con, cur = opendb()
@@ -73,4 +77,10 @@ def Booking(booking):
 		booking['check-in-time-minute'],booking['check-out-date'],booking['check-out-time-hour'],
 		booking['check-out-time-minute'],booking['no-of-people'],booking['room-type']))
 	con.commit()
+
+	con.close()
+
+def Admin(admin):
+	pass
+
 
