@@ -3,7 +3,7 @@ import datetime
 
 import email_handler
 
-from flask import Flask, render_template, send_from_directory, json, request, jsonify, send_file, session, request,abort 
+from flask import Flask, render_template, send_from_directory, json, request, jsonify, send_file, session, request,abort
 
 import os
 import threading
@@ -16,7 +16,7 @@ class WrongEntry(Exception):
 
 @app.route('/')
 def base():
-    
+
     return render_template('sssm-home.html')
 
 @app.route('/sssm-home')
@@ -27,10 +27,10 @@ def home():
     print(image_names)
     session['logged_in'] = False
     return render_template('sssm-home.html',image_names=image_names)
-    
+
 @app.route('/sssm-gallery')
 def gallery():
-    
+
     print("entering loop")
     image_names=os.listdir('./static/images/gallery')
     print("2")
@@ -39,17 +39,17 @@ def gallery():
 
 @app.route('/sssm-committee')
 def commitee():
-    
+
     return render_template('sssm-committee.html')
 
 @app.route('/sssm-developers')
 def developers():
-    
+
     return render_template('sssm-developers.html')
 
 @app.route('/sssm-shyambaba')
 def shyambaba():
-    
+
     return render_template('sssm-shyambaba.html')
 
 @app.route('/sssm-dharamshala')
@@ -73,7 +73,7 @@ def downloads():
 
 @app.route('/sssm-calender')
 def calendar():
-   
+
     return render_template('sssm-calender.html')
 
 @app.route('/sssm-login',methods = ['POST','GET'])
@@ -94,12 +94,12 @@ def login():
 
 @app.route('/sssm-mandal')
 def mandal():
-    
+
     return render_template('sssm-mandal.html')
 
 @app.route('/sssm-404')
 def error():
-    
+
     return render_template('sssm-404.html')
 
 @app.route('/sssm-membership',methods = ['POST','GET'])
@@ -114,7 +114,7 @@ def membership():
             'email':request.form['email'],'birth_date':request.form['birth_date'],
             'address':request.form['address'],'occupation':request.form['occupation'],
             'mobile':request.form['mobile']}
-            
+
             member['landline']= request.form['landline']
             member['office']= request.form['office']
 
@@ -140,9 +140,9 @@ def membership():
 
             member['date_time'] = datetime.datetime.now().strftime("%d %B %Y at %X")
 
-
-            #t1 = threading.Thread(target=database_handler.Member, args=(member,)) 
-            #t2 = threading.Thread(target=email_handler.send_member_mail, args=(member,)) 
+            print(member)
+            #t1 = threading.Thread(target=database_handler.Member, args=(member,))
+            #t2 = threading.Thread(target=email_handler.send_member_mail, args=(member,))
 
             database_handler.Member(member)
             email_handler.send_member_mail(member)
@@ -165,14 +165,14 @@ def query_page():
             'email':request.form['email'],'mobile':request.form['mobile'],'query':request.form['query']}
             query['date_time'] = datetime.datetime.now().strftime("%d %B %Y at %X")
 
-            #t1 = threading.Thread(target=database_handler.Query, args=(query,)) 
-            #t2 = threading.Thread(target=email_handler.send_query_mail, args=(query,)) 
+            #t1 = threading.Thread(target=database_handler.Query, args=(query,))
+            #t2 = threading.Thread(target=email_handler.send_query_mail, args=(query,))
 
-            #t1.start() 
-            #t2.start() 
-        
-            #t1.join() 
-            #t2.join() 
+            #t1.start()
+            #t2.start()
+
+            #t1.join()
+            #t2.join()
 
             database_handler.Query(query)
             email_handler.send_query_mail(query)
@@ -200,14 +200,14 @@ def roombooking():
 
             booking['date_time'] = datetime.datetime.now().strftime("%d %B %Y at %X")
 
-            # t1 = threading.Thread(target=database_handler.Booking, args=(booking,)) 
-            # t2 = threading.Thread(target=email_handler.send_booking_mail, args=(booking,)) 
-            
-            # t1.start() 
-            # t2.start() 
-          
-            # t1.join() 
-            # t2.join() 
+            # t1 = threading.Thread(target=database_handler.Booking, args=(booking,))
+            # t2 = threading.Thread(target=email_handler.send_booking_mail, args=(booking,))
+
+            # t1.start()
+            # t2.start()
+
+            # t1.join()
+            # t2.join()
 
             database_handler.Booking(booking)
             email_handler.send_booking_mail(booking)
@@ -222,7 +222,7 @@ def roombooking():
 
 @app.route('/sssm-supportus')
 def supportus():
-    
+
     return render_template('sssm-supportus.html')
 
 @app.route('/sssm-trustees')
@@ -240,10 +240,10 @@ def renderblog():
         data = json.load(blog_file)
     return jsonify(data);
 
-@app.errorhandler(404) 
-def not_found(e): 
+@app.errorhandler(404)
+def not_found(e):
 
-    return render_template("sssm-404.html") 
+    return render_template("sssm-404.html")
 
 if __name__ == "__main__":
     app.run(debug=True,port=1234)

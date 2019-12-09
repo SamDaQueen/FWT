@@ -32,7 +32,17 @@
 
 					<div class="mb-3">
 						<label for="occupation">Occupation</label>
-						<input type="text" class="form-control" name="occupation"  placeholder="Student" required>
+                        <div>
+                            <select>
+                                <option value="self_employed">Self Employed</option>
+                                <option value="service">Service</option>
+                                <option value="professional">Professional</option>
+                                <option value="homemaker">Homemaker</option>
+                                <option value="retired">Retired</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+						<!--<input type="text" class="form-control" name="occupation"  placeholder="Student" required>-->
 					</div>
 
 					<div class="row">
@@ -49,6 +59,13 @@
 							<input type="number" class="form-control" name="mobile"  placeholder="98332 XXXXX" required size="10" min="0">
 						</div>
 					</div>
+                    <div class="row">
+                        <div class="col-md-4 mb-3 ">
+                            <label for="mobile">Secondary Mobile</label>
+                            <input type="number" class="form-control" name="second_mobile"  placeholder="98332 XXXXX" min="0">
+                        </div>
+                    </div>
+
 					<hr class="mb-4">
 
 					<h4 class="mb-3">Family members</h4>
@@ -58,7 +75,19 @@
 							<input type="text" class="form-control" name="fm1_name"  placeholder="Name"  >
 						</div>
 						<div class="col-md-4 mb-3">
-							<input type="text" class="form-control" name="fm1_relation"  placeholder="Relation"  >
+							<!--<input type="text" class="form-control" name="fm1_relation"  placeholder="Relation"  >-->
+                            <select name="fm1_relation">
+                                <option value="" selected="seclected">Select a Relationship</option>
+                                <option value="mother">Mother</option>
+                                <option value="father">Father</option>
+                                <option value="son">Son</option>
+                                <option value="daughter">Daughter</option>
+                                <option value="wife">Wife</option>
+                                <option value="houseband">Husband</option>
+                                <option value="brother">Brother</option>
+                                <option value="sister">Sister</option>
+                                <option value="daughter_in_law">Daughter-in-law</option>
+                            </select>
 						</div>
 						<div class="col-md-4 mb-3">
 							<input type="date" class="form-control" name="fm1_birth_date"  placeholder="1998-12-31" max="2010-12-31" min="1950-12-31"  >
@@ -69,7 +98,18 @@
 							<input type="text" class="form-control" name="fm2_name"  placeholder="Name"  >
 						</div>
 						<div class="col-md-4 mb-3">
-							<input type="text" class="form-control" name="fm2_relation"  placeholder="Relation"  >
+                            <select name="fm2_relation">
+                                <option value="" selected="seclected">Select a Relationship</option>
+                                <option value="mother">Mother</option>
+                                <option value="father">Father</option>
+                                <option value="son">Son</option>
+                                <option value="daughter">Daughter</option>
+                                <option value="wife">Wife</option>
+                                <option value="houseband">Husband</option>
+                                <option value="brother">Brother</option>
+                                <option value="sister">Sister</option>
+                                <option value="daughter_in_law">Daughter-in-law</option>
+                            </select>
 						</div>
 						<div class="col-md-4 mb-3">
 							<input type="date" class="form-control" name="fm2_birth_date"  placeholder="1998-12-31" max="2010-12-31" min="1950-12-31"  >
@@ -80,7 +120,18 @@
 							<input type="text" class="form-control" name="fm3_name"  placeholder="Name"  >
 						</div>
 						<div class="col-md-4 mb-3">
-							<input type="text" class="form-control" name="fm3_relation"  placeholder="Relation"  >
+                            <select name="fm3_relation">
+                                <option value="" selected="seclected">Select a Relationship</option>
+                                <option value="mother">Mother</option>
+                                <option value="father">Father</option>
+                                <option value="son">Son</option>
+                                <option value="daughter">Daughter</option>
+                                <option value="wife">Wife</option>
+                                <option value="houseband">Husband</option>
+                                <option value="brother">Brother</option>
+                                <option value="sister">Sister</option>
+                                <option value="daughter_in_law">Daughter-in-law</option>
+                            </select>
 						</div>
 						<div class="col-md-4 mb-3">
 							<input type="date" class="form-control" name="fm3_birth_date"  placeholder="1998-12-31" max="2010-12-31" min="1950-12-31"  >
@@ -91,7 +142,18 @@
 							<input type="text" class="form-control" name="fm4_name"  placeholder="Name"  >
 						</div>
 						<div class="col-md-4 mb-3">
-							<input type="text" class="form-control" name="fm4_relation"  placeholder="Relation"  >
+                            <select name="fm4_relation">
+                                <option value="" selected="seclected">Select a Relationship</option>
+                                <option value="mother">Mother</option>
+                                <option value="father">Father</option>
+                                <option value="son">Son</option>
+                                <option value="daughter">Daughter</option>
+                                <option value="wife">Wife</option>
+                                <option value="houseband">Husband</option>
+                                <option value="brother">Brother</option>
+                                <option value="sister">Sister</option>
+                                <option value="daughter_in_law">Daughter-in-law</option>
+                            </select>
 						</div>
 						<div class="col-md-4 mb-3">
 							<input type="date" class="form-control" name="fm4_birth_date"  placeholder="1998-12-31" max="2010-12-31" min="1950-12-31"  >
@@ -102,7 +164,18 @@
 							<input type="text" class="form-control" name="fm5_name"  placeholder="Name"  >
 						</div>
 						<div class="col-md-4 mb-3">
-							<input type="text" class="form-control" name="fm5_relation"  placeholder="Relation"  >
+                            <select name="fm5_relation">
+                                <option value="" selected="seclected">Select a Relationship</option>
+                                <option value="mother">Mother</option>
+                                <option value="father">Father</option>
+                                <option value="son">Son</option>
+                                <option value="daughter">Daughter</option>
+                                <option value="wife">Wife</option>
+                                <option value="houseband">Husband</option>
+                                <option value="brother">Brother</option>
+                                <option value="sister">Sister</option>
+                                <option value="daughter_in_law">Daughter-in-law</option>
+                            </select>
 						</div>
 						<div class="col-md-4 mb-3">
 							<input type="date" class="form-control" name="fm5_birth_date"  placeholder="1998-12-31" max="2010-12-31" min="1950-12-31"  >
