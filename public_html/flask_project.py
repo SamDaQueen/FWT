@@ -141,6 +141,7 @@ def membership():
             member['date_time'] = datetime.datetime.now().strftime("%d %B %Y at %X")
 
             print(member)
+            
             #t1 = threading.Thread(target=database_handler.Member, args=(member,))
             #t2 = threading.Thread(target=email_handler.send_member_mail, args=(member,))
 
@@ -148,12 +149,14 @@ def membership():
             email_handler.send_member_mail(member)
 
         except WrongEntry:
+            print('a')
             return render_template('sssm-membership.html',form=1)
-        except Exception as e:
-            return render_template('sssm-membership.html',form=3)
+        # except Exception as e:
+        #     print(e)
+        #     return render_template('sssm-membership.html',form=3)
 
-        else:
-            return render_template('sssm-membership.html',form=2)
+    else:
+        return render_template('sssm-membership.html',form=2)
 
 @app.route('/sssm-query',methods = ['POST','GET'])
 def query_page():
